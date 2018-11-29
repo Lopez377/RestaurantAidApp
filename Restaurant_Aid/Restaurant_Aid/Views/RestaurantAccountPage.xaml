@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+    xmlns:control="clr-namespace:Restaurant_Aid.Controls"
+    prism:ViewModelLocator.AutowireViewModel="True"
+    x:Class="Restaurant_Aid.Views.RestaurantAccountPage"
+    x:Name="Restaurant_Account"
+    Title="R_Account">
+
+    <StackLayout HorizontalOptions="Center"
+                 VerticalOptions="Center"
+                 Spacing="10">
+
+        <Label
+            Text="Restaurant: The Za Place" />
+
+        <Label
+            Text="ID: Za91224" />
+
+        <Label>
+            <Label.Text>
+                Address: 15935 Pepperoni Way
+                Cheeseville, CA 35715
+            </Label.Text>
+        </Label>
+
+
+
+
+    </StackLayout>
+
+
+
+
+</ContentPage>

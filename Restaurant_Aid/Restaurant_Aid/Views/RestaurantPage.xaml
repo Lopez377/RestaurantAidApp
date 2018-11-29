@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+	xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	x:Class="Restaurant_Aid.Views.RestaurantPage"
+    Title="Restaurant">
+
+    <StackLayout
+		HorizontalOptions="CenterAndExpand"
+		VerticalOptions="CenterAndExpand"
+        Spacing="10">
+
+        <Label
+            HorizontalOptions="CenterAndExpand"
+            VerticalOptions="CenterAndExpand"
+            Text="{Binding Title}" />
+
+        <Image Source="RestIcon.jpg" />
+
+        <Button
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            Text="RestaurantAccount"
+            Command="{Binding NavigateToRestaurantAccountPageCommand}" />
+
+        <Button
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            Text="RestaurantPing"
+            Command="{Binding NavigateToRestaurantPingPageCommand}" />
+
+        <Button
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            Text="RestaurantMenu"
+            Command="{Binding NavigateToRestaurantMenuPageCommand}" />
+
+    </StackLayout>
+
+</ContentPage>

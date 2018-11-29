@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Restaurant_Aid.Views.CustomerPage"
+    Title="Customer">
+
+    <StackLayout
+		HorizontalOptions="CenterAndExpand"
+		VerticalOptions="CenterAndExpand"
+        Spacing="10">
+
+        <Label
+            HorizontalOptions="CenterAndExpand"
+            VerticalOptions="CenterAndExpand"
+            Text="{Binding Title}" />
+
+        <Image Source="RestIcon.jpg" />
+        
+        <Button
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            Text="CustomerAccount"
+            Command="{Binding NavigateToCustomerAccountPageCommand}" />
+
+        <Button
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            Text="CustomerCart"
+            Command="{Binding NavigateToCustomerCartPageCommand}" />
+
+        <Button
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            Text="CustomerMenu"
+            Command="{Binding NavigateToCustomerMenuPageCommand}" />
+
+    </StackLayout>
+
+
+</ContentPage>

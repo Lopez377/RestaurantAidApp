@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Restaurant_Aid.Views.MenuEdit"
+             Title="Menu Edit">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <TableView Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" 
+                   Intent="Form" HasUnevenRows="true">
+                <TableSection Title="General">
+                    <EntryCell x:Name="itemNameCell" Label="Name" />
+                </TableSection>
+
+                <TableSection Title="Description">
+                    <ViewCell>
+                        <StackLayout Padding="15">
+                            <Editor x:Name="descriptionCell" />
+                        </StackLayout>
+                    </ViewCell>
+                </TableSection>
+
+                <TableSection Title="Price">
+                    <ViewCell>
+                        <StackLayout Padding="15">
+                            <Editor x:Name="priceCell" />
+                        </StackLayout>
+                    </ViewCell>
+                </TableSection>
+            </TableView>
+
+            <Button Text="Save" Grid.Row="1" Grid.Column="0" BackgroundColor="#EE3F60" TextColor="White" x:Name="saveButton" />
+            <Button Text="Cancel" Grid.Row="1" Grid.Column="1" BackgroundColor="#4CC7F2" TextColor="White" x:Name="cancelButton" />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

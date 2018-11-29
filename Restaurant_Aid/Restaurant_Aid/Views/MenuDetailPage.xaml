@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Restaurant_Aid.Views.MenuDetailPage"
+             Title="R_Details">
+    <ContentPage.Content>
+        <ScrollView>
+            <FlexLayout
+            AlignItems="Start"
+            AlignContent="Start"
+            Wrap="Wrap">
+
+                <!-- <Image Source="buns.png" FlexLayout.Basis="100%" /> -->
+
+                <Label Text="{Binding Name}" HorizontalTextAlignment="Center" TextColor="#01487E"
+                   FontAttributes="Bold" FontSize="Large" Margin="10, 10" />
+
+                <BoxView FlexLayout.Basis="100%" HeightRequest="0" />
+
+                <Label Text="Description" FontAttributes="Bold" FontSize="Medium" TextColor="#EE3F60"
+                   Margin="10,10" HorizontalOptions="FillAndExpand" />
+                <BoxView FlexLayout.Basis="100%" HeightRequest="0" />
+                <Label Text="{Binding Description}" Margin="10,10" FontSize="Small" />
+
+                <BoxView FlexLayout.Basis="100%" HeightRequest="0" />
+
+                <Label Text="Price" FontAttributes="Bold" FontSize="Medium" TextColor="#EE3F60" 
+                   Margin="10,10" HorizontalOptions="FillAndExpand" />
+                <BoxView FlexLayout.Basis="100%" HeightRequest="0" />
+                <Label Text="{Binding Price}" Margin="10,10" FontSize="Small" />
+
+            </FlexLayout>
+        </ScrollView>
+    </ContentPage.Content>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Edit" Clicked="Edit_Clicked" />
+    </ContentPage.ToolbarItems>
+</ContentPage>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Restaurant_Aid.Controls.InputControl"
+             x:Name="this">
+
+    <Grid Padding="5">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0"
+           Text="{Binding Source={x:Reference this},
+                       Path=Caption}"
+           HorizontalOptions="Center"
+           HorizontalTextAlignment="Start" 
+               />
+
+        <Entry Grid.Row="1"
+               VerticalOptions="Start"
+               Text="{Binding Source={x:Reference this}, Path=Value, Mode=TwoWay}"
+               />
+
+    </Grid>
+
+</ContentPage>
