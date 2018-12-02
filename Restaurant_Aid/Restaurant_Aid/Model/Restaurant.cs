@@ -13,19 +13,15 @@ namespace Restaurant_Aid.Model
     [Serializable]
     public class Restaurant
     {
-        private string _Name;
-        [XmlIgnore]
-        public string Name
-        {
-            [DebuggerStepThrough]
-            get { return _Name; }
-
-            [DebuggerStepThrough]
-            set
-            {
-                if (_Name == value) return;
-                _Name = value;
-            }
-        }
+        public string username { get; set; }
+        public string phone { get; set; }
+        public string passhash { get; set; }
+        public string address { get; set; }
+        public int id { get; set; }
+        public string loc { get; set; }
+        public string name { get; set; }
     }
 }
+
+
+//[{"username": "ABC", "phone": "3434", "passhash": "hash", "address": "123 a", "id": 1, "gps_location": "loc", "name": "name"

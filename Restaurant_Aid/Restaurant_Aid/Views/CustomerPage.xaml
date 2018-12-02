@@ -8,7 +8,7 @@
     <StackLayout
 		HorizontalOptions="CenterAndExpand"
 		VerticalOptions="CenterAndExpand"
-        Spacing="10">
+        Spacing="7">
 
         <Label
             HorizontalOptions="CenterAndExpand"
@@ -34,6 +34,12 @@
             VerticalOptions="Center"
             Text="CustomerMenu"
             Command="{Binding NavigateToCustomerMenuPageCommand}" />
+
+        <Button
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            Text="Restaurants"
+            Command="{Binding NavigateToRestaurantListPage}" />
 
     </StackLayout>
 

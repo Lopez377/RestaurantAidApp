@@ -60,6 +60,7 @@ namespace Restaurant_Aid
             containerRegistry.RegisterForNavigation<CustomerSearchPage, CustomerSearchPageViewModel>();
             containerRegistry.RegisterForNavigation<CustomerCartPage, CustomerCartPageViewModel>();
             containerRegistry.RegisterForNavigation<CustomerMenuPage, RestaurantViewModel>();
+            containerRegistry.RegisterForNavigation<RestaurantListPage, RestaurantListPageViewModel>();
         }
     }
 }
