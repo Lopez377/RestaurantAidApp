@@ -3091,13 +3091,7 @@ containing a value of this type.
         public static final int abc_textfield_search_material=0x7f020051;
         public static final int abc_vector_test=0x7f020052;
         public static final int avd_hide_password=0x7f020053;
-        public static final int avd_hide_password_1=0x7f020131;
-        public static final int avd_hide_password_2=0x7f020132;
-        public static final int avd_hide_password_3=0x7f020133;
         public static final int avd_show_password=0x7f020054;
-        public static final int avd_show_password_1=0x7f020134;
-        public static final int avd_show_password_2=0x7f020135;
-        public static final int avd_show_password_3=0x7f020136;
         public static final int design_bottom_navigation_item_background=0x7f020055;
         public static final int design_fab_background=0x7f020056;
         public static final int design_ic_visibility=0x7f020057;

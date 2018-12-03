@@ -19,13 +19,22 @@ namespace Restaurant_Aid.Views
         public async void logInSubmit(object sender, EventArgs e)
         {
             Debug.WriteLine("Logging In!");
-            Profile p = await apiService.GetProfile(usernameEntry.Text);
-            if(p.passhash != passwordEntry.Text)
+            try
             {
-                DisplayAlert("ERROR", "Incorrect Password!", "Ok");
+                Profile p = await apiService.GetProfile(usernameEntry.Text);
+                if(p.passhash != passwordEntry.Text)
+                {
+                    await DisplayAlert("ERROR", "Incorrect Password!", "Ok");
+                }
+                else
+                {
+                    await Navigation.PushAsync(new CustomerPage());
+                }
             }
-            else
+            // DEBUGGING move to customer page with no log in 
+            catch (Exception)
             {
+                Console.WriteLine("No login provided.");
                 await Navigation.PushAsync(new CustomerPage());
             }
         }
