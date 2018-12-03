@@ -61,6 +61,8 @@ namespace Restaurant_Aid
             containerRegistry.RegisterForNavigation<CustomerCartPage, CustomerCartPageViewModel>();
             containerRegistry.RegisterForNavigation<CustomerMenuPage, RestaurantViewModel>();
             containerRegistry.RegisterForNavigation<RestaurantListPage, RestaurantListPageViewModel>();
+            containerRegistry.RegisterForNavigation<CustomerLogInPage, CustomerLogInPageViewModel>();
+            containerRegistry.RegisterForNavigation<AccountCreationPage, AccountCreationPageViewModel>();
         }
     }
 }

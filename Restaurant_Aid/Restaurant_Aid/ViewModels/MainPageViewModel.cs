@@ -46,7 +46,7 @@ namespace Restaurant_Aid.ViewModels
         {
             Debug.WriteLine($"**** {this.GetType().Name}.{nameof(OnNavigateToCustomer)}");
 
-            _navigationService.NavigateAsync(nameof(CustomerPage));
+            _navigationService.NavigateAsync(nameof(CustomerLogInPage));
         }
 
         public void OnNavigatedFrom(INavigationParameters parameters)

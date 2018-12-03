@@ -25,3 +25,5 @@ C:\Users\Toby\Projects\RestaurantAidApp\Restaurant_Aid\Restaurant_Aid\obj\Debug\
 C:\Users\Toby\Projects\RestaurantAidApp\Restaurant_Aid\Restaurant_Aid\obj\Debug\netstandard2.0\Restaurant_Aid.dll
 C:\Users\Toby\Projects\RestaurantAidApp\Restaurant_Aid\Restaurant_Aid\obj\Debug\netstandard2.0\Restaurant_Aid.pdb
 C:\Users\Toby\Projects\RestaurantAidApp\Restaurant_Aid\Restaurant_Aid\obj\Debug\netstandard2.0\Restaurant_Aid.csprojAssemblyReference.cache
+C:\Users\Toby\Projects\RestaurantAidApp\Restaurant_Aid\Restaurant_Aid\obj\Debug\netstandard2.0\Views\CustomerLogInPage.xaml.g.cs
+C:\Users\Toby\Projects\RestaurantAidApp\Restaurant_Aid\Restaurant_Aid\obj\Debug\netstandard2.0\Views\AccountCreationPage.xaml.g.cs
