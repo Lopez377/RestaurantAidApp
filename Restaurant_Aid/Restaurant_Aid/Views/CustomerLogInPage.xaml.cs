@@ -16,6 +16,7 @@ namespace Restaurant_Aid.Views
             apiService = new ApiService();
         }
 
+
         public async void registerAccountName(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new AccountCreationPage());
