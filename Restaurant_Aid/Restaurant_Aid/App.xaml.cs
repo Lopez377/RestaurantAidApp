@@ -37,7 +37,7 @@ namespace Restaurant_Aid
             InitializeComponent();
 
             RMenuList = new List<RMenuItem>();
-            RMenuList.Add(new RMenuItem { Id = Guid.NewGuid(), Name = "Pizza", Description = "Yummy Pizza", Price = "10.99" });
+            RMenuList.Add(new RMenuItem { id = 0, name = "Pizza", description = "Yummy Pizza", price = "10.99" });
             CMenuList = new List<RMenuItem>();
 
             await NavigationService.NavigateAsync("NavigationPage/MainPage");

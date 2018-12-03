@@ -36,6 +36,24 @@ namespace Restaurant_Aid.Services
             return JsonConvert.DeserializeObject<IEnumerable<Restaurant>>(temp).ToList();
         }
 
+        public async Task<List<RMenuItem>> GetMenu(int rid)
+        {
+            Uri uri = new Uri(API_URL + "menu?rid=" + rid.ToString());
+            string temp;
+            try
+            {
+                temp = await SendGetRequest(uri);
+            }
+            catch (System.Net.WebException e)
+            {
+                throw e;
+            }
+            Debug.WriteLine("Parsing JSON");
+            return JsonConvert.DeserializeObject<IEnumerable<RMenuItem>>(temp).ToList();
+        }
+
+
+
         public async Task<string> SendGetRequest(Uri uri)
         {
             HttpResponseMessage response = await httpClient.GetAsync(uri);

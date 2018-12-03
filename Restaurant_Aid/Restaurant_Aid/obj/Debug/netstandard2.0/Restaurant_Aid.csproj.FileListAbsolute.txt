@@ -24,3 +24,4 @@ C:\Users\Toby\Projects\RestaurantAidApp\Restaurant_Aid\Restaurant_Aid\bin\Debug\
 C:\Users\Toby\Projects\RestaurantAidApp\Restaurant_Aid\Restaurant_Aid\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\Toby\Projects\RestaurantAidApp\Restaurant_Aid\Restaurant_Aid\obj\Debug\netstandard2.0\Restaurant_Aid.dll
 C:\Users\Toby\Projects\RestaurantAidApp\Restaurant_Aid\Restaurant_Aid\obj\Debug\netstandard2.0\Restaurant_Aid.pdb
+C:\Users\Toby\Projects\RestaurantAidApp\Restaurant_Aid\Restaurant_Aid\obj\Debug\netstandard2.0\Restaurant_Aid.csprojAssemblyReference.cache

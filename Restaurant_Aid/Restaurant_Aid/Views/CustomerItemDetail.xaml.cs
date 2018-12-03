@@ -41,9 +41,9 @@ namespace Restaurant_Aid.Views
 
             //await Navigation.PushAsync(editPage);
             //int i = 2;
-            string CName = TheMenuItem.Name;
-            string CDesc = TheMenuItem.Description;
-            string cPrice = TheMenuItem.Price;
+            string CName = TheMenuItem.name;
+            string CDesc = TheMenuItem.description;
+            string cPrice = TheMenuItem.price;
 
 
             //foreach (RMenuItem item in App.CMenuList)
@@ -56,7 +56,7 @@ namespace Restaurant_Aid.Views
             //    i++;
             //}
 
-            App.CMenuList.Add(new RMenuItem { Id = Guid.NewGuid(), Name = CName, Description =CDesc, Price = cPrice });
+            App.CMenuList.Add(new RMenuItem {id = 0, name = CName, description =CDesc, price = cPrice });
             //App.CMenuList.Add(TheMenuItem); 
         }
     }

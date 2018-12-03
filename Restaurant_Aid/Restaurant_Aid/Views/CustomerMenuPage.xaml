@@ -11,7 +11,8 @@
             <ListView x:Name="menuList">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <TextCell Text="{Binding Name}"/>
+                        <TextCell Text="{Binding name}" Detail="{Binding price}}"/>
+                        
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>

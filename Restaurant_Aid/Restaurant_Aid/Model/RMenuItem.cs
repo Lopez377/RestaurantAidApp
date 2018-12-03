@@ -12,10 +12,10 @@ namespace Restaurant_Aid.Model
 {
    public class RMenuItem
     {
-        public Guid Id { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
-        public string Price { get; set; }
+        public int id { get; set; }
+        public string name { get; set; }
+        public string description { get; set; }
+        public string price { get; set; }
+        public int rid { get; set; }
     }
-   
 }

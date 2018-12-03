@@ -4,15 +4,21 @@ using System;
 using System.Collections.Generic;
 using Restaurant_Aid.Model;
 using Restaurant_Aid;
+using Restaurant_Aid.Services;
+using System.Diagnostics;
+using System.Collections.ObjectModel;
 
 namespace Restaurant_Aid.Views
 {
     public partial class CustomerMenuPage : ContentPage
     {
-        
-        public CustomerMenuPage()
+        public int rid;
+        private ApiService apiService;
+        public ObservableCollection<RMenuItem> menuListSource;
+        public CustomerMenuPage(int _rid)
         {
             InitializeComponent();
+            rid = _rid;
             menuList.ItemSelected += async (sender, e) =>
             {
                 if (e.SelectedItem != null)
@@ -24,14 +30,17 @@ namespace Restaurant_Aid.Views
                     menuList.SelectedItem = null;
                 }
             };
+            apiService = new ApiService();
+            menuListSource = new ObservableCollection<RMenuItem>();
+            menuList.ItemsSource = menuListSource;
         }
-        protected override void OnAppearing()
+        protected override async void OnAppearing()
         {
             base.OnAppearing();
-
-            menuList.ItemsSource = null;
-            // CHANGED
-            menuList.ItemsSource = App.RMenuList;
+            foreach(RMenuItem menuItem in await apiService.GetMenu(rid))
+            {
+                menuListSource.Add(menuItem);
+            }
         }
 
        /* async void Add_Clicked(object sender, System.EventArgs e)

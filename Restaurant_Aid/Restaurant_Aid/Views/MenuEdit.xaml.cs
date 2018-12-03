@@ -41,11 +41,11 @@ namespace Restaurant_Aid.Views
 
         void InitializePage()
         {
-            Title = TheMenuItem.Name ?? "New Menu Item";
+            Title = TheMenuItem.name ?? "New Menu Item";
 
-            itemNameCell.Text = TheMenuItem.Name;
-            descriptionCell.Text = TheMenuItem.Description;
-            priceCell.Text = TheMenuItem.Price;
+            itemNameCell.Text = TheMenuItem.name;
+            descriptionCell.Text = TheMenuItem.description;
+            priceCell.Text = TheMenuItem.price;
 
             saveButton.Clicked += async (sender, args) =>
             {
@@ -69,20 +69,20 @@ namespace Restaurant_Aid.Views
 
         void SaveMenuItem()
         {
-            TheMenuItem.Name = itemNameCell.Text;
-            TheMenuItem.Description = descriptionCell.Text;
-            TheMenuItem.Price = priceCell.Text;
+            TheMenuItem.name = itemNameCell.Text;
+            TheMenuItem.description = descriptionCell.Text;
+            TheMenuItem.price = priceCell.Text;
 
             if (IsNew)
             {
-                TheMenuItem.Id = Guid.NewGuid();
+                TheMenuItem.id = 0;
                 //CHANGED
                 App.RMenuList.Add(TheMenuItem);
             }
             else
             {
                 //CHANGED
-                var savedItem = App.RMenuList.Find(r => r.Id == TheMenuItem.Id);
+                var savedItem = App.RMenuList.Find(r => r.id == TheMenuItem.id);
                 savedItem = TheMenuItem;
 
                 MenuItemSaved?.Invoke(this, savedItem);

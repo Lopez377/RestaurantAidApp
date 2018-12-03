@@ -32,12 +32,6 @@
         <Button
             HorizontalOptions="Center"
             VerticalOptions="Center"
-            Text="CustomerMenu"
-            Command="{Binding NavigateToCustomerMenuPageCommand}" />
-
-        <Button
-            HorizontalOptions="Center"
-            VerticalOptions="Center"
             Text="Restaurants"
             Command="{Binding NavigateToRestaurantListPage}" />
 
