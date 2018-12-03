@@ -16,20 +16,6 @@ namespace Restaurant_Aid.Views
             apiService = new ApiService();
         }
 
-        public async void logInSubmit(object sender, EventArgs e)
-        {
-            Debug.WriteLine("Logging In!");
-            Profile p = await apiService.GetProfile(usernameEntry.Text);
-            if(p.passhash != passwordEntry.Text)
-            {
-                DisplayAlert("ERROR", "Incorrect Password!", "Ok");
-            }
-            else
-            {
-                await Navigation.PushAsync(new CustomerPage());
-            }
-        }
-
         public async void registerAccountName(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new AccountCreationPage());

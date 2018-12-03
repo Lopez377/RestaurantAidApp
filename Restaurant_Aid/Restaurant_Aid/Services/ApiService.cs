@@ -86,6 +86,12 @@ namespace Restaurant_Aid.Services
             return await SendPostRequest(uri, formData);
         }
 
+        public async Task<bool> createOrder(List<KeyValuePair<string, string>> formData)
+        {
+            Uri uri = new Uri(API_URL + "order");
+            return await SendPostRequest(uri, formData);
+        }
+
         public async Task<bool> SendPostRequest(Uri uri, List<KeyValuePair<string, string>> formData)
         {
             Debug.WriteLine("Sending POST request");

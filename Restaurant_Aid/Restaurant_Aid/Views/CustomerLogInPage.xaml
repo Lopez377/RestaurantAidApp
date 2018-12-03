@@ -5,9 +5,9 @@
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="Restaurant_Aid.Views.CustomerLogInPage">
     <StackLayout>
-        <Entry x:Name ="usernameEntry" Placeholder="Username" />
-        <Entry x:Name ="passwordEntry" Placeholder="Password" IsPassword="True"/>
-        <Button Text="Log In" Clicked="logInSubmit" />
+        <Entry Placeholder="Username" Text="{Binding username}"/>
+        <Entry Placeholder="Password" IsPassword="True" Text="{Binding password}"/>
+        <Button Text="Log In" Command="{Binding logInSubmit}" />
         <Button Text="Register" Clicked="registerAccountName"/>
     </StackLayout>
 </ContentPage>
