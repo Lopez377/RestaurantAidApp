@@ -2,6 +2,17 @@
   "version": 3,
   "targets": {
     ".NETStandard,Version=v2.0": {
+      "ExternalMapsPlugin/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/Plugin.MapsPlugin.Abstractions.dll": {},
+          "lib/netstandard1.0/Plugin.MapsPlugin.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/Plugin.MapsPlugin.Abstractions.dll": {},
+          "lib/netstandard1.0/Plugin.MapsPlugin.dll": {}
+        }
+      },
       "Microsoft.NETCore.Platforms/1.1.0": {
         "type": "package",
         "compile": {
@@ -111,8 +122,36 @@
     }
   },
   "libraries": {
+    "ExternalMapsPlugin/1.0.0": {
+      "sha512": "fJVRdSeSN16T1FBDbVJJg7H1IyDiD4IrfkYmbo4UohwonLfKpOU7LIp4azRFg7HpSIdmi5e6e2cHLxFTxFJBcA==",
+      "type": "package",
+      "path": "externalmapsplugin/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        "externalmapsplugin.1.0.0.nupkg.sha512",
+        "externalmapsplugin.nuspec",
+        "lib/MonoAndroid10/Plugin.MapsPlugin.Abstractions.dll",
+        "lib/MonoAndroid10/Plugin.MapsPlugin.Abstractions.pdb",
+        "lib/MonoAndroid10/Plugin.MapsPlugin.Abstractions.xml",
+        "lib/MonoAndroid10/Plugin.MapsPlugin.XML",
+        "lib/MonoAndroid10/Plugin.MapsPlugin.dll",
+        "lib/MonoAndroid10/Plugin.MapsPlugin.pdb",
+        "lib/Xamarin.iOS10/Plugin.MapsPlugin.Abstractions.dll",
+        "lib/Xamarin.iOS10/Plugin.MapsPlugin.Abstractions.pdb",
+        "lib/Xamarin.iOS10/Plugin.MapsPlugin.Abstractions.xml",
+        "lib/Xamarin.iOS10/Plugin.MapsPlugin.XML",
+        "lib/Xamarin.iOS10/Plugin.MapsPlugin.dll",
+        "lib/netstandard1.0/Plugin.MapsPlugin.Abstractions.dll",
+        "lib/netstandard1.0/Plugin.MapsPlugin.Abstractions.pdb",
+        "lib/netstandard1.0/Plugin.MapsPlugin.Abstractions.xml",
+        "lib/netstandard1.0/Plugin.MapsPlugin.XML",
+        "lib/netstandard1.0/Plugin.MapsPlugin.dll",
+        "lib/netstandard1.0/Plugin.MapsPlugin.pdb",
+        "readme.txt"
+      ]
+    },
     "Microsoft.NETCore.Platforms/1.1.0": {
-      "sha512": "bLpT1f/SFlO1CzqXG12KnJzpZs6lv24uX2Rzi4Fmm0noJpNlnWRVryuO3yK18Ca04t/YHcO1e1Z0WDfjseqNzw==",
+      "sha512": "kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
       "type": "package",
       "path": "microsoft.netcore.platforms/1.1.0",
       "files": [
@@ -552,6 +591,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
+      "ExternalMapsPlugin >= 1.0.0",
       "NETStandard.Library >= 2.0.3",
       "Newtonsoft.Json >= 12.0.1",
       "Prism.Unity.Forms >= 7.1.0.431",
@@ -559,23 +599,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Toby\\.nuget\\packages\\": {},
+    "C:\\Users\\Hugh\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Toby\\Projects\\RestaurantAidApp\\Restaurant_Aid\\Restaurant_Aid\\Restaurant_Aid.csproj",
+      "projectUniqueName": "D:\\School\\CSUSM\\Fall 2018\\RestaurantAidApp\\Restaurant_Aid\\Restaurant_Aid\\Restaurant_Aid.csproj",
       "projectName": "Restaurant_Aid",
-      "projectPath": "C:\\Users\\Toby\\Projects\\RestaurantAidApp\\Restaurant_Aid\\Restaurant_Aid\\Restaurant_Aid.csproj",
-      "packagesPath": "C:\\Users\\Toby\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Toby\\Projects\\RestaurantAidApp\\Restaurant_Aid\\Restaurant_Aid\\obj\\",
+      "projectPath": "D:\\School\\CSUSM\\Fall 2018\\RestaurantAidApp\\Restaurant_Aid\\Restaurant_Aid\\Restaurant_Aid.csproj",
+      "packagesPath": "C:\\Users\\Hugh\\.nuget\\packages\\",
+      "outputPath": "D:\\School\\CSUSM\\Fall 2018\\RestaurantAidApp\\Restaurant_Aid\\Restaurant_Aid\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Toby\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Hugh\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -599,6 +639,10 @@
     "frameworks": {
       "netstandard2.0": {
         "dependencies": {
+          "ExternalMapsPlugin": {
+            "target": "Package",
+            "version": "[1.0.0, )"
+          },
           "NETStandard.Library": {
             "suppressParent": "All",
             "target": "Package",

@@ -18,4 +18,7 @@
             </ListView>
         </StackLayout>
     </ContentPage.Content>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Directions" Clicked="Map_Clicked" />
+    </ContentPage.ToolbarItems>
 </ContentPage>

@@ -16,9 +16,10 @@ namespace Restaurant_Aid.Views
         public async void goToRestaurantMenu(object sender, EventArgs e)
         {
             int rid = ((Restaurant)((ListView)sender).SelectedItem).id;
+            string address = ((Restaurant)((ListView)sender).SelectedItem).address;
             Debug.WriteLine($"**** {this.GetType().Name}.{nameof(goToRestaurantMenu)}");
 
-            await Navigation.PushAsync(new CustomerMenuPage(rid));
+            await Navigation.PushAsync(new CustomerMenuPage(rid, address));
         }
     }
 }

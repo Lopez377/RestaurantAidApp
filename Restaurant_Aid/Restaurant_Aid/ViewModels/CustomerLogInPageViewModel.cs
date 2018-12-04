@@ -23,23 +23,32 @@ namespace Restaurant_Aid.ViewModels
 
         public CustomerLogInPageViewModel(INavigationService navigationService)
         {
-            _navigationService = navigationService;
-            logInSubmit = new DelegateCommand(OnNavigateToCustomerAsync);
-            apiService = new ApiService();
+                _navigationService = navigationService;
+                logInSubmit = new DelegateCommand(OnNavigateToCustomerAsync);
+                apiService = new ApiService();
+
         }
 
         private async void OnNavigateToCustomerAsync()
         {
             Debug.WriteLine("Logging In!");
-            Profile p = await apiService.GetProfile(username);
-            if (p.passhash != password)
+            try
             {
-                Application.Current.MainPage.DisplayAlert("ERROR", "Incorrect Password!", "Ok");
-                //DisplayAlert("ERROR", "Incorrect Password!", "Ok");
+                Profile p = await apiService.GetProfile(username);
+                if (p.passhash != password)
+                {
+                    await Application.Current.MainPage.DisplayAlert("ERROR", "Incorrect Password!", "Ok");
+                    //DisplayAlert("ERROR", "Incorrect Password!", "Ok");
+                }
+                else
+                {
+                    await _navigationService.NavigateAsync(nameof(CustomerPage));
+                }
             }
-            else
+            catch
             {
-                _navigationService.NavigateAsync(nameof(CustomerPage));
+                Console.WriteLine("Login Error");
+                await _navigationService.NavigateAsync(nameof(CustomerPage));
             }
         }
     }

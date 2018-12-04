@@ -7,15 +7,18 @@ using Restaurant_Aid;
 using Restaurant_Aid.Services;
 using System.Diagnostics;
 using System.Collections.ObjectModel;
+using Plugin.MapsPlugin;
+using System.ComponentModel;
 
 namespace Restaurant_Aid.Views
 {
     public partial class CustomerMenuPage : ContentPage
     {
         public int rid;
+        private string address;
         private ApiService apiService;
         public ObservableCollection<RMenuItem> menuListSource;
-        public CustomerMenuPage(int _rid)
+        public CustomerMenuPage(int _rid, string address)
         {
             InitializeComponent();
             rid = _rid;
@@ -42,18 +45,35 @@ namespace Restaurant_Aid.Views
                 menuListSource.Add(menuItem);
             }
         }
-
-       /* async void Add_Clicked(object sender, System.EventArgs e)
+        // WORKING MAPS NAV
+        async void Map_Clicked(object sender, System.EventArgs e)
         {
-            var editPage = new MenuEdit();
+            string completeAddress = $"{address}";
+            Debug.WriteLine($"**** {this.GetType().Name}.{nameof(UsingMaps)}: {completeAddress}");
 
-            var editNavPage = new NavigationPage(editPage)
-            {
-                BarBackgroundColor = Color.FromHex("#01487E"),
-                BarTextColor = Color.White
-            };
+            var launchedMapsSucceeded = await CrossMapsPlugin.Current.NavigateTo("Location", address, string.Empty, string.Empty, string.Empty, string.Empty, string.Empty);
+        }
 
-            await Navigation.PushModalAsync(editNavPage);
-        }*/
+        private async void UsingMaps()
+        {
+            string completeAddress = $"{address}";
+            Debug.WriteLine($"**** {this.GetType().Name}.{nameof(UsingMaps)}: {completeAddress}");
+
+            var launchedMapsSucceeded = await CrossMapsPlugin.Current.NavigateTo("Location", address, string.Empty, string.Empty, string.Empty, string.Empty, string.Empty);
+        }
+
+
+        /* async void Add_Clicked(object sender, System.EventArgs e)
+         {
+             var editPage = new MenuEdit();
+
+             var editNavPage = new NavigationPage(editPage)
+             {
+                 BarBackgroundColor = Color.FromHex("#01487E"),
+                 BarTextColor = Color.White
+             };
+
+             await Navigation.PushModalAsync(editNavPage);
+         }*/
     }
 }
