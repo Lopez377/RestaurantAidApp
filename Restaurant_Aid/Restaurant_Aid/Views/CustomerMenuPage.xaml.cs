@@ -40,9 +40,12 @@ namespace Restaurant_Aid.Views
         protected override async void OnAppearing()
         {
             base.OnAppearing();
-            foreach(RMenuItem menuItem in await apiService.GetMenu(rid))
+            if (menuListSource.Count == 0)
             {
-                menuListSource.Add(menuItem);
+                foreach (RMenuItem menuItem in await apiService.GetMenu(rid))
+                {
+                    menuListSource.Add(menuItem);
+                }
             }
         }
         // WORKING MAPS NAV

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="Restaurant_Aid.Views.OrderInfoPage">
+    <StackLayout>
+        <Label x:Name="restaurantName"/>
+        <ListView x:Name="menuItemListView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding name}" Detail="{Binding price}"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Alert Restaurant" Clicked="sendAlert" />
+    </ContentPage.ToolbarItems>
+</ContentPage>

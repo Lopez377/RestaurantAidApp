@@ -30,33 +30,8 @@ namespace Restaurant_Aid.Views
 
         async void Cart_Clicked(object sender, System.EventArgs e)
         {
-            //var editPage = new MenuEdit(TheMenuItem);
 
-            //editPage.MenuItemSaved += (page, item) =>
-            //{
-            //    BindingContext = null;
-            //    TheMenuItem = item;
-            //    BindingContext = TheMenuItem;
-            //};
-
-            //await Navigation.PushAsync(editPage);
-            //int i = 2;
-            string CName = TheMenuItem.name;
-            string CDesc = TheMenuItem.description;
-            string cPrice = TheMenuItem.price;
-
-
-            //foreach (RMenuItem item in App.CMenuList)
-            //{
-            //    if (CName.Equals(item.Name))
-            //    {
-            //        CName = CName + i.ToString();
-
-            //    }
-            //    i++;
-            //}
-
-            App.CMenuList.Add(new RMenuItem {id = 0, name = CName, description =CDesc, price = cPrice });
+            App.CMenuList.Add(TheMenuItem);
             //App.CMenuList.Add(TheMenuItem); 
         }
     }

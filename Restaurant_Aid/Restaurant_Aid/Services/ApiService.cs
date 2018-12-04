@@ -36,6 +36,22 @@ namespace Restaurant_Aid.Services
             return JsonConvert.DeserializeObject<IEnumerable<Restaurant>>(temp).ToList();
         }
 
+        public async Task<Restaurant> GetSingleRestaurant(string rid)
+        {
+            Uri uri = new Uri(API_URL + "restaurant?id=" + rid);
+            string temp;
+            try
+            {
+                temp = await SendGetRequest(uri);
+            }
+            catch (System.Net.WebException e)
+            {
+                throw e;
+            }
+            Debug.WriteLine("Parsing JSON");
+            return JsonConvert.DeserializeObject<IEnumerable<Restaurant>>(temp).ToList().First();
+        }
+
         public async Task<List<RMenuItem>> GetMenu(int rid)
         {
             Uri uri = new Uri(API_URL + "menu?rid=" + rid.ToString());
@@ -50,6 +66,38 @@ namespace Restaurant_Aid.Services
             }
             Debug.WriteLine("Parsing JSON");
             return JsonConvert.DeserializeObject<IEnumerable<RMenuItem>>(temp).ToList();
+        }
+
+        public async Task<List<Order>> GetOrdersForProfile(int pid)
+        {
+            Uri uri = new Uri(API_URL + "order?pid=" + pid.ToString());
+            string temp;
+            try
+            {
+                temp = await SendGetRequest(uri);
+            }
+            catch (System.Net.WebException e)
+            {
+                throw e;
+            }
+            Debug.WriteLine("Parsing JSON");
+            return JsonConvert.DeserializeObject<IEnumerable<Order>>(temp).ToList();
+        }
+
+        public async Task<List<Order>> GetSingleOrder(string oid)
+        {
+            Uri uri = new Uri(API_URL + "order?id=" + oid);
+            string temp;
+            try
+            {
+                temp = await SendGetRequest(uri);
+            }
+            catch (System.Net.WebException e)
+            {
+                throw e;
+            }
+            Debug.WriteLine("Parsing JSON");
+            return JsonConvert.DeserializeObject<IEnumerable<Order>>(temp).ToList();
         }
 
         public async Task<Profile> GetProfile(string username)
@@ -89,6 +137,12 @@ namespace Restaurant_Aid.Services
         public async Task<bool> createOrder(List<KeyValuePair<string, string>> formData)
         {
             Uri uri = new Uri(API_URL + "order");
+            return await SendPostRequest(uri, formData);
+        }
+
+        public async Task<bool> sendAlert(List<KeyValuePair<string, string>> formData)
+        {
+            Uri uri = new Uri(API_URL + "alert");
             return await SendPostRequest(uri, formData);
         }
 
