@@ -17,7 +17,7 @@
             <TableView Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" 
                    Intent="Form" HasUnevenRows="true">
                 <TableSection Title="General">
-                    <EntryCell x:Name="itemNameCell" Label="Name" />
+                    <EntryCell x:Name="itemNameCell" Label="Name"/>
                 </TableSection>
 
                 <TableSection Title="Description">
@@ -37,8 +37,20 @@
                 </TableSection>
             </TableView>
 
-            <Button Text="Save" Grid.Row="1" Grid.Column="0" BackgroundColor="#EE3F60" TextColor="White" x:Name="saveButton" />
-            <Button Text="Cancel" Grid.Row="1" Grid.Column="1" BackgroundColor="#4CC7F2" TextColor="White" x:Name="cancelButton" />
+            <Button Text="Save" Grid.Row="1" Grid.Column="0" x:Name="saveButton" 
+                TextColor="WhiteSmoke"
+                BorderColor="GhostWhite"
+                BackgroundColor="#232F34"
+                BorderWidth="1"
+                BorderRadius="10"
+                FontFamily="Roboto"/>
+            <Button Text="Cancel" Grid.Row="1" Grid.Column="1" x:Name="cancelButton" 
+                TextColor="WhiteSmoke"
+                BorderColor="GhostWhite"
+                BackgroundColor="#232F34"
+                BorderWidth="1"
+                BorderRadius="10"
+                FontFamily="Roboto"/>
         </Grid>
     </ContentPage.Content>
 </ContentPage>

@@ -4,11 +4,28 @@
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
              prism:ViewModelLocator.AutowireViewModel="True"
              Title="Customer Login"
-             x:Class="Restaurant_Aid.Views.CustomerLogInPage">
+             x:Class="Restaurant_Aid.Views.CustomerLogInPage"
+             BackgroundColor="#e0e0e0">
     <StackLayout>
-        <Entry Placeholder="Username" Text="{Binding username}"/>
-        <Entry Placeholder="Password" IsPassword="True" Text="{Binding password}"/>
-        <Button Text="Log In" Command="{Binding logInSubmit}" />
-        <Button Text="Register" Clicked="registerAccountName"/>
+        <Entry Placeholder="Username" Text="{Binding username}"
+               FontFamily="Roboto"
+               TextColor="Black"/>
+        <Entry Placeholder="Password" IsPassword="True" Text="{Binding password}"
+               FontFamily="Roboto"
+               TextColor="Black"/>
+        <Button Text="Log In" Command="{Binding logInSubmit}"
+                TextColor="WhiteSmoke"
+                BorderColor="GhostWhite"
+                BackgroundColor="#232F34"
+                BorderWidth="1"
+                BorderRadius="10"
+                FontFamily="Roboto"/>
+        <Button Text="Register" Clicked="registerAccountName"
+                TextColor="WhiteSmoke"
+                BorderColor="GhostWhite"
+                BackgroundColor="#232F34"
+                BorderWidth="1"
+                BorderRadius="10"
+                FontFamily="Roboto"/>
     </StackLayout>
 </ContentPage>

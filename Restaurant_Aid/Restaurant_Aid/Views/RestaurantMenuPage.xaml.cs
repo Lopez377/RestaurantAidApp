@@ -39,8 +39,8 @@ namespace Restaurant_Aid.Views
 
             var editNavPage = new NavigationPage(editPage)
             {
-                BarBackgroundColor = Color.FromHex("#01487E"),
-                BarTextColor = Color.White
+                //BarBackgroundColor = Color.FromHex("#01487E"),
+                BarTextColor = Color.Black
             };
 
             await Navigation.PushModalAsync(editNavPage);

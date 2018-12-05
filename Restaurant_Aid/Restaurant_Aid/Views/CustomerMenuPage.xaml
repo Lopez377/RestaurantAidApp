@@ -4,15 +4,15 @@
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="Restaurant_Aid.Views.CustomerMenuPage"
-             Title ="C_Menu">
+             Title ="C_Menu"
+             BackgroundColor="#e0e0e0">
 
     <ContentPage.Content>
         <StackLayout>
             <ListView x:Name="menuList">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <TextCell Text="{Binding name}" Detail="{Binding price}}"/>
-                        
+                        <TextCell Text="{Binding name}" Detail="{Binding price}"/>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
