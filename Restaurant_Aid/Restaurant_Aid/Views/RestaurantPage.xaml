@@ -11,7 +11,7 @@
 		VerticalOptions="CenterAndExpand"
         Spacing="8">
 
-        <Image Source="RestIcon.jpg" />
+        <Image Source="RestIcon.png" />
 
         <Button
             HorizontalOptions="Center"

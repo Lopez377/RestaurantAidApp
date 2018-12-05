@@ -3000,7 +3000,7 @@ namespace Restaurant_Aid.Droid
 			public const int notify_panel_notification_icon_bg = 2130837802;
 			
 			// aapt resource value: 0x7f02012b
-			public const int RestauranAid_Ban = 2130837803;
+			public const int Restaurant_Ban = 2130837803;
 			
 			// aapt resource value: 0x7f02012c
 			public const int RestIcon = 2130837804;

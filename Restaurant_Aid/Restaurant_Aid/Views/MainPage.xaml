@@ -11,7 +11,7 @@
 		VerticalOptions="StartAndExpand"
         Spacing="100">
 
-        <Image Source="RestauranAid_Ban.jpg" 
+        <Image Source="Restaurant_Ban.png" 
                HorizontalOptions="Center"
                VerticalOptions="Start"/>
 
