@@ -21,7 +21,7 @@
         <Button
             HorizontalOptions="Center"
             VerticalOptions="Center"
-            Text="RestaurantAccount"
+            Text="Account"
             Command="{Binding NavigateToRestaurantAccountPageCommand}"
                 TextColor="WhiteSmoke"
                 BorderColor="GhostWhite"
@@ -33,7 +33,7 @@
         <Button
             HorizontalOptions="Center"
             VerticalOptions="Center"
-            Text="RestaurantPing"
+            Text="Alerts"
             Command="{Binding NavigateToRestaurantPingPageCommand}" 
                 TextColor="WhiteSmoke"
                 BorderColor="GhostWhite"
@@ -45,7 +45,7 @@
         <Button
             HorizontalOptions="Center"
             VerticalOptions="Center"
-            Text="RestaurantMenu"
+            Text="Menu"
             Command="{Binding NavigateToRestaurantMenuPageCommand}"
                 TextColor="WhiteSmoke"
                 BorderColor="GhostWhite"
