@@ -16,6 +16,7 @@ namespace Restaurant_Aid
         public static List<RMenuItem> RMenuList { get; set; }
         public static List<RMenuItem> CMenuList { get; set; }
         public static int pid { get; set; }
+        public static int rid { get; set; }
 
         /* 
          * The Xamarin Forms XAML Previewer in Visual Studio uses System.Activator.CreateInstance.
@@ -66,6 +67,8 @@ namespace Restaurant_Aid
             containerRegistry.RegisterForNavigation<AccountCreationPage, AccountCreationPageViewModel>();
             containerRegistry.RegisterForNavigation<PaymentPage, PaymentPageViewModel>();
             containerRegistry.RegisterForNavigation<OrderInfoPage, OrderInfoPageViewModel>();
+            containerRegistry.RegisterForNavigation<RestaurantLogIn, RestaurantLogInViewModel>();
+            containerRegistry.RegisterForNavigation<RestaurantCreationPage, RestaurantCreationPageViewModel>();
         }
     }
 }

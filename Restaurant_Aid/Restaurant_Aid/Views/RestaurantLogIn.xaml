@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             Title="Restaurant Login"
+             x:Class="Restaurant_Aid.Views.RestaurantLogIn">
+    <StackLayout>
+        <Entry Placeholder="Username" Text="{Binding username}"/>
+        <Entry Placeholder="Password" IsPassword="True" Text="{Binding password}"/>
+        <Button Text="Log In" Command="{Binding logInSubmit}" />
+        <Button Text="Register" Clicked="registerAccountName"/>
+    </StackLayout>
+</ContentPage>

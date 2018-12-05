@@ -7,10 +7,8 @@
     <StackLayout>
         <Entry x:Name ="usernameEntry" Placeholder="Username" />
         <Entry x:Name ="passwordEntry" Placeholder="Password" IsPassword="True"/>
-        <Button Text="Submit" Clicked="submitProfile"
-                BorderColor="Black"
-                BackgroundColor="AliceBlue"
-                BorderWidth="1"
-                FontFamily="Arial"/>
+        <Entry x:Name ="emailEntry" Placeholder="Email" />
+        <Entry x:Name ="dobEntry" Placeholder="D.O.B. ex 1/2/95" />
+        <Button Text="Submit" Clicked="submitProfile" />
     </StackLayout>
 </ContentPage>
