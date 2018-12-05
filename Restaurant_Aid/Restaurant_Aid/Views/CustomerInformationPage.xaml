@@ -1,15 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Restaurant_Aid.Views.CustomerInformationPage">
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="Restaurant_Aid.Views.CustomerInformationPage"
+             Title="Account Info"
+             BackgroundColor="#e0e0e0">
     <ContentPage.Content>
         
         <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-            <Label x:Name="Cid"/>
-            <Label x:Name="Name"/>
-            <Label x:Name="Username"/>
-            <Label x:Name="Email"/>
-            <Label x:Name="Dob"/>
+            <Label x:Name="cidLabel" />
+            <Label x:Name="usernameLabel" />
+            <Label x:Name="emailLabel" />
+            <Label x:Name="dobLabel" />
         </StackLayout>
      
     </ContentPage.Content>

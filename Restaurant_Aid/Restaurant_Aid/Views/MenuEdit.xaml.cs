@@ -8,84 +8,40 @@ using System.Threading.Tasks;
 using Restaurant_Aid.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Restaurant_Aid.Services;
 
 namespace Restaurant_Aid.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MenuEdit : ContentPage
     {
-        public event EventHandler<RMenuItem> MenuItemSaved;
+        private RMenuItem menuItem;
+        private ApiService apiService;
 
-        RMenuItem TheMenuItem { get; set; }
-        bool IsNew { get; set; }
-
-        public MenuEdit()
+        public MenuEdit(RMenuItem menuItem)
         {
             InitializeComponent();
-
-            TheMenuItem = new RMenuItem();
-            IsNew = true;
-
-            InitializePage();
+            this.menuItem = menuItem;
+            apiService = new ApiService();
+            nameEntry.Text = menuItem.name;
+            priceEntry.Text = menuItem.price;
+            descriptionEntry.Text = menuItem.description;
         }
 
-        public MenuEdit(RMenuItem item)
+        public async void submitChanges(object sender, EventArgs e)
         {
-            InitializeComponent();
-
-            TheMenuItem = item;
-            IsNew = false;
-
-            InitializePage();
-        }
-
-        void InitializePage()
-        {
-            Title = TheMenuItem.name ?? "New Menu Item";
-
-            itemNameCell.Text = TheMenuItem.name;
-            descriptionCell.Text = TheMenuItem.description;
-            priceCell.Text = TheMenuItem.price;
-
-            saveButton.Clicked += async (sender, args) =>
+            List<KeyValuePair<string, string>> formData = new List<KeyValuePair<string, string>>();
+            formData.Add(new KeyValuePair<string, string>("name", nameEntry.Text));
+            formData.Add(new KeyValuePair<string, string>("price", priceEntry.Text));
+            formData.Add(new KeyValuePair<string, string>("description", descriptionEntry.Text));
+            if (await apiService.editMenuItem(menuItem.id.ToString(), formData))
             {
-                SaveMenuItem();
-                await CloseWindow();
-            };
-
-            cancelButton.Clicked += async (sender, args) =>
-            {
-                await CloseWindow();
-            };
-        }
-
-        async Task CloseWindow()
-        {
-            if (IsNew)
-                await Navigation.PopModalAsync(true);
-            else
-                await Navigation.PopAsync(true);
-        }
-
-        void SaveMenuItem()
-        {
-            TheMenuItem.name = itemNameCell.Text;
-            TheMenuItem.description = descriptionCell.Text;
-            TheMenuItem.price = priceCell.Text;
-
-            if (IsNew)
-            {
-                TheMenuItem.id = 0;
-                //CHANGED
-                App.RMenuList.Add(TheMenuItem);
+                await DisplayAlert("SUCCESS!", "Your menu item has been edited!", "Ok!");
+                await Navigation.PopAsync();
             }
             else
             {
-                //CHANGED
-                var savedItem = App.RMenuList.Find(r => r.id == TheMenuItem.id);
-                savedItem = TheMenuItem;
-
-                MenuItemSaved?.Invoke(this, savedItem);
+                await DisplayAlert("ERROR!", "Your menu item failed to be edited!", "Ok");
             }
         }
     }

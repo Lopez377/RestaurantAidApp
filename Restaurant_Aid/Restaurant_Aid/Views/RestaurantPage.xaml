@@ -24,7 +24,7 @@
                 BorderWidth="1"
                 BorderRadius="10"
                 FontFamily="Roboto"/>
-
+        
         <Button
             HorizontalOptions="Center"
             VerticalOptions="Center"

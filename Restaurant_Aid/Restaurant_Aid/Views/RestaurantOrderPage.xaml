@@ -4,6 +4,7 @@
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
              prism:ViewModelLocator.AutowireViewModel="True"
              Title="Orders"
+             BackgroundColor="#e0e0e0"
              x:Class="Restaurant_Aid.Views.RestaurantOrderPage">
     <StackLayout>
         <ListView x:Name="orderListView" ItemTapped="goToOrderInfo">

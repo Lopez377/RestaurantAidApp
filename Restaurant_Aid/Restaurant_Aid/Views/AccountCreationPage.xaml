@@ -4,6 +4,7 @@
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="Restaurant_Aid.Views.AccountCreationPage"
+             Title="Register"
              BackgroundColor="#e0e0e0">
     <StackLayout>
         <Entry x:Name ="usernameEntry" Placeholder="Username"

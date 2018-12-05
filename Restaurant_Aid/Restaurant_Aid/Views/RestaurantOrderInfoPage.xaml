@@ -4,10 +4,27 @@
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
              prism:ViewModelLocator.AutowireViewModel="True"
              Title="Details"
+             BackgroundColor="#e0e0e0"
              x:Class="Restaurant_Aid.Views.RestaurantOrderInfoPage">
     <StackLayout>
-        <Button Text="Set to IN PROGRESS" Clicked="updateStatus" CommandParameter="IN PROGRESS"/>
-        <Button Text="Set to SERVED" Clicked="updateStatus" CommandParameter="SERVED"/>
+        <Button Text="Set to IN PROGRESS" Clicked="updateStatus" CommandParameter="IN PROGRESS"
+                HorizontalOptions="Center"
+            VerticalOptions="Center"
+                TextColor="WhiteSmoke"
+                BorderColor="GhostWhite"
+                BackgroundColor="#232F34"
+                BorderWidth="1"
+                BorderRadius="10"
+                FontFamily="Roboto"/>
+        <Button Text="Set to SERVED" Clicked="updateStatus" CommandParameter="SERVED"
+                HorizontalOptions="Center"
+            VerticalOptions="Center"
+                TextColor="WhiteSmoke"
+                BorderColor="GhostWhite"
+                BackgroundColor="#232F34"
+                BorderWidth="1"
+                BorderRadius="10"
+                FontFamily="Roboto"/>
         <Label x:Name="idLabel" />
         <Label x:Name="statusLabel" />
         <Label x:Name="detailLabel" />

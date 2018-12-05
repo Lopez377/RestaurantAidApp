@@ -15,6 +15,7 @@ namespace Restaurant_Aid
     {
         public static List<RMenuItem> RMenuList { get; set; }
         public static List<RMenuItem> CMenuList { get; set; }
+        public static Profile ProfileCache { get; set; }
         public static int pid { get; set; }
         public static int rid { get; set; }
 
@@ -55,6 +56,7 @@ namespace Restaurant_Aid
 
             containerRegistry.RegisterForNavigation<CustomerPage, CustomerViewModel>();
             containerRegistry.RegisterForNavigation<RestaurantPage, RestaurantViewModel>();
+            containerRegistry.RegisterForNavigation<CustomerInformationPage, CustomerInformationPageViewModel>();
             containerRegistry.RegisterForNavigation<RestaurantAccountPage, RestaurantAccountPageViewModel>();
             containerRegistry.RegisterForNavigation<RestaurantPingPage, RestaurantPingPageViewModel>();
             containerRegistry.RegisterForNavigation<RestaurantMenuPage, RestaurantMenuPageViewModel>();
@@ -73,6 +75,7 @@ namespace Restaurant_Aid
             containerRegistry.RegisterForNavigation<AlertDetailPage, AlertDetailPageViewModel>();
             containerRegistry.RegisterForNavigation<RestaurantOrderPage, RestaurantOrderPageViewModel>();
             containerRegistry.RegisterForNavigation<RestaurantOrderInfoPage, RestaurantOrderInfoPageViewModel>();
+            containerRegistry.RegisterForNavigation<AddMenuItem, AddMenuItemViewModel>();
         }
     }
 }

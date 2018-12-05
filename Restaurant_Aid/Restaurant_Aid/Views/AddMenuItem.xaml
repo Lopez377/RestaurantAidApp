@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             Title="Add Menu Item"
+             BackgroundColor="#e0e0e0"
+             x:Class="Restaurant_Aid.Views.AddMenuItem">
+    <StackLayout>
+        <Entry x:Name="nameEntry" Placeholder="Menu Item Name"/>
+        <Entry x:Name="priceEntry" Placeholder="Price"/>
+        <Entry x:Name="descriptionEntry" Placeholder="Description"/>
+        <Button Text="Submit Item" Clicked="submitItem"         
+                HorizontalOptions="Center"
+            VerticalOptions="Center"
+                TextColor="WhiteSmoke"
+                BorderColor="GhostWhite"
+                BackgroundColor="#232F34"
+                BorderWidth="1"
+                BorderRadius="10"
+                FontFamily="Roboto"/>
+    </StackLayout>
+</ContentPage>

@@ -4,9 +4,10 @@
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="Restaurant_Aid.Views.OrderInfoPage"
+             Title="Details"
              BackgroundColor="#e0e0e0">
     <StackLayout>
-        <Label x:Name="restaurantName"/>
+        <Label x:Name="restaurantName" HorizontalOptions="Center"/>
         <ListView x:Name="menuItemListView">
             <ListView.ItemTemplate>
                 <DataTemplate>
@@ -16,6 +17,6 @@
         </ListView>
     </StackLayout>
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Alert Restaurant" Clicked="sendAlert" />
+        <ToolbarItem Text="Alert Staff" Clicked="sendAlert" />
     </ContentPage.ToolbarItems>
 </ContentPage>

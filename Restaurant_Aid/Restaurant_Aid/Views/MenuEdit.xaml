@@ -5,53 +5,19 @@
              Title="Menu Edit"
              BackgroundColor="#e0e0e0">
     <ContentPage.Content>
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*" />
-                <RowDefinition Height="Auto" />
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-            </Grid.ColumnDefinitions>
-
-            <TableView Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" 
-                   Intent="Form" HasUnevenRows="true">
-                <TableSection Title="General">
-                    <EntryCell x:Name="itemNameCell" Label="Name"/>
-                </TableSection>
-
-                <TableSection Title="Description">
-                    <ViewCell>
-                        <StackLayout Padding="15">
-                            <Editor x:Name="descriptionCell" />
-                        </StackLayout>
-                    </ViewCell>
-                </TableSection>
-
-                <TableSection Title="Price">
-                    <ViewCell>
-                        <StackLayout Padding="15">
-                            <Editor x:Name="priceCell" />
-                        </StackLayout>
-                    </ViewCell>
-                </TableSection>
-            </TableView>
-
-            <Button Text="Save" Grid.Row="1" Grid.Column="0" x:Name="saveButton" 
+        <StackLayout>
+            <Entry x:Name="nameEntry"/>
+            <Entry x:Name="priceEntry"/>
+            <Entry x:Name="descriptionEntry"/>
+            <Button Text="Submit Changes" Clicked="submitChanges"
+                            HorizontalOptions="Center"
+            VerticalOptions="Center"
                 TextColor="WhiteSmoke"
                 BorderColor="GhostWhite"
                 BackgroundColor="#232F34"
                 BorderWidth="1"
                 BorderRadius="10"
                 FontFamily="Roboto"/>
-            <Button Text="Cancel" Grid.Row="1" Grid.Column="1" x:Name="cancelButton" 
-                TextColor="WhiteSmoke"
-                BorderColor="GhostWhite"
-                BackgroundColor="#232F34"
-                BorderWidth="1"
-                BorderRadius="10"
-                FontFamily="Roboto"/>
-        </Grid>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

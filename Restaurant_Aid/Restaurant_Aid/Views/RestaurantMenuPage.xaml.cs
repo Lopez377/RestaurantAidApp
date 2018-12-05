@@ -3,47 +3,39 @@ using Restaurant_Aid.ViewModels;
 using System;
 using System.Collections.Generic;
 using Restaurant_Aid.Model;
+using Restaurant_Aid.Services;
+using System.Collections.ObjectModel;
 
 namespace Restaurant_Aid.Views
 {
     public partial class RestaurantMenuPage : ContentPage
     {
-        
+        private ApiService apiService;
+        ObservableCollection<RMenuItem> menuItems;
         public RestaurantMenuPage()
         {
             InitializeComponent();
-            menuList.ItemSelected += async (sender, e) =>
-            {
-                if (e.SelectedItem != null)
-                {
-                    var detailPage = new MenuDetailPage(e.SelectedItem as RMenuItem);
-
-                    await Navigation.PushAsync(detailPage);
-
-                    menuList.SelectedItem = null;
-                }
-            };
+            apiService = new ApiService();
+            menuItems = new ObservableCollection<RMenuItem>();
+            menuList.ItemsSource = menuItems;
         }
-        protected override void OnAppearing()
+        protected override async void OnAppearing()
         {
-            base.OnAppearing();
-
-            menuList.ItemsSource = null;
-            //CHANGED
-            menuList.ItemsSource = App.RMenuList;
+            menuItems.Clear();
+            foreach(RMenuItem menuItem in await apiService.GetMenu(App.rid))
+            {
+                menuItems.Add(menuItem);
+            }
         }
 
         async void Add_Clicked(object sender, System.EventArgs e)
         {
-            var editPage = new MenuEdit();
+            await Navigation.PushAsync(new AddMenuItem());
+        }
 
-            var editNavPage = new NavigationPage(editPage)
-            {
-                //BarBackgroundColor = Color.FromHex("#01487E"),
-                BarTextColor = Color.Black
-            };
-
-            await Navigation.PushModalAsync(editNavPage);
+        async void goToDetailPage(object sender, System.EventArgs e)
+        {
+            await Navigation.PushAsync(new MenuDetailPage(((RMenuItem)((ListView)sender).SelectedItem).id.ToString()));
         }
     }
 }

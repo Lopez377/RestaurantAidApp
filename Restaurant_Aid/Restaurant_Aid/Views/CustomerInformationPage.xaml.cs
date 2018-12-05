@@ -20,15 +20,11 @@ namespace Restaurant_Aid.Views
         {
             InitializeComponent();
             apiService = new ApiService();
-        }
-
-        protected override async void OnAppearing()
-        {
-            //c = await apiService.GetProfile();
-            //Cid.Text = "Customer ID#: " + c.id.ToString();
-            //Username.Text = "Username: " + c.username;
-            //Email.Text = "E-Mail: " + c.email;
-            //Dob.Text = "DoB: " + c.dob;
+            c = App.ProfileCache;
+            cidLabel.Text = "Customer ID#: " + c.id.ToString();
+            usernameLabel.Text = "Username: " + c.username;
+            emailLabel.Text = "E-Mail: " + c.email;
+            dobLabel.Text = "DoB: " + c.dob;
         }
     }
 }

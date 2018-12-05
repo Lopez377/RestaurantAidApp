@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Restaurant_Aid.Model
 {
-    class Profile
+    public class Profile
     {
         public int id { get; set; }
         public string username { get; set; }

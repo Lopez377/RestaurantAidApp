@@ -1,4 +1,5 @@
 ﻿using Restaurant_Aid.Model;
+using Restaurant_Aid.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,32 +14,41 @@ namespace Restaurant_Aid.Views
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class MenuDetailPage : ContentPage
 	{
-        RMenuItem TheMenuItem { get; set; }
+        private string mid;
+        private RMenuItem menuItem;
+        private ApiService apiService;
 
-		public MenuDetailPage ()
+		public MenuDetailPage (string mid)
 		{
 			InitializeComponent ();
+            this.mid = mid;
+            apiService = new ApiService();
 		}
 
-        public MenuDetailPage(RMenuItem item)
+        protected override async void OnAppearing()
         {
-            InitializeComponent();
-            TheMenuItem = item;
-            BindingContext = TheMenuItem;
+            menuItem = await apiService.GetMenuItem(mid);
+            nameLabel.Text = "Item Name: " + menuItem.name;
+            priceLabel.Text = "Price: " + menuItem.price;
+            descriptionLabel.Text = "Description: " + menuItem.description;
         }
 
         async void Edit_Clicked(object sender, System.EventArgs e)
         {
-            var editPage = new MenuEdit(TheMenuItem);
+            await Navigation.PushAsync(new MenuEdit(menuItem));
+        }
 
-            editPage.MenuItemSaved += (page, item) =>
+        public async void deleteMenuItem(object sender, EventArgs e)
+        {
+            if (await apiService.deleteMenuItem(mid))
             {
-                BindingContext = null;
-                TheMenuItem = item;
-                BindingContext = TheMenuItem;
-            };
-
-            await Navigation.PushAsync(editPage);
+                await DisplayAlert("SUCCESS!", "Menu Item deleted!", "Ok!");
+                await Navigation.PopAsync();
+            }
+            else
+            {
+                await DisplayAlert("ERROR!", "Menu Item delete failed!", "Ok");
+            }
         }
     }
 }

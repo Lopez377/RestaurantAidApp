@@ -7,7 +7,7 @@
     prism:ViewModelLocator.AutowireViewModel="True"
     x:Class="Restaurant_Aid.Views.RestaurantAccountPage"
     x:Name="Restaurant_Account"
-    Title="R_Account"
+    Title="Account"
     BackgroundColor="#e0e0e0">
 
     <StackLayout HorizontalOptions="Center" VerticalOptions="Center">

@@ -43,6 +43,7 @@ namespace Restaurant_Aid.ViewModels
                 else
                 {
                     App.pid = p.id;
+                    App.ProfileCache = p;
                     await _navigationService.NavigateAsync(nameof(CustomerPage));
                 }
             }
