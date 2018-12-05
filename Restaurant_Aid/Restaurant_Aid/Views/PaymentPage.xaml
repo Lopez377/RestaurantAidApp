@@ -10,6 +10,10 @@
         <Entry Placeholder="Expiration MM/YY" />
         <Entry Placeholder="CSV"/>
         <Entry x:Name="details" Placeholder="Extra Details"/>
-        <Button Text="Submit Order" Clicked="submitOrder"/>
+        <Button Text="Submit Order" Clicked="submitOrder"
+                BorderColor="Black"
+                BackgroundColor="AliceBlue"
+                BorderWidth="1"
+                FontFamily="Arial"/>
     </StackLayout>
 </ContentPage>

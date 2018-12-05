@@ -7,6 +7,10 @@
     <StackLayout>
         <Entry x:Name ="usernameEntry" Placeholder="Username" />
         <Entry x:Name ="passwordEntry" Placeholder="Password" IsPassword="True"/>
-        <Button Text="Submit" Clicked="submitProfile" />
+        <Button Text="Submit" Clicked="submitProfile"
+                BorderColor="Black"
+                BackgroundColor="AliceBlue"
+                BorderWidth="1"
+                FontFamily="Arial"/>
     </StackLayout>
 </ContentPage>

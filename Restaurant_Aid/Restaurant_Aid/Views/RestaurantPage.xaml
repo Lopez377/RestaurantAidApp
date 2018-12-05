@@ -21,19 +21,31 @@
             HorizontalOptions="Center"
             VerticalOptions="Center"
             Text="RestaurantAccount"
-            Command="{Binding NavigateToRestaurantAccountPageCommand}" />
+            Command="{Binding NavigateToRestaurantAccountPageCommand}"
+            BorderColor="Black"
+                BackgroundColor="AliceBlue"
+                BorderWidth="1"
+                FontFamily="Arial"/>
 
         <Button
             HorizontalOptions="Center"
             VerticalOptions="Center"
             Text="RestaurantPing"
-            Command="{Binding NavigateToRestaurantPingPageCommand}" />
+            Command="{Binding NavigateToRestaurantPingPageCommand}" 
+            BorderColor="Black"
+                BackgroundColor="AliceBlue"
+                BorderWidth="1"
+                FontFamily="Arial"/>
 
         <Button
             HorizontalOptions="Center"
             VerticalOptions="Center"
             Text="RestaurantMenu"
-            Command="{Binding NavigateToRestaurantMenuPageCommand}" />
+            Command="{Binding NavigateToRestaurantMenuPageCommand}"
+            BorderColor="Black"
+                BackgroundColor="AliceBlue"
+                BorderWidth="1"
+                FontFamily="Arial"/>
 
     </StackLayout>
 

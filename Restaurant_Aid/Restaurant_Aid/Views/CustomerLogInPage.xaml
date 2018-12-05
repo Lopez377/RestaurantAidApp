@@ -7,7 +7,15 @@
     <StackLayout>
         <Entry Placeholder="Username" Text="{Binding username}"/>
         <Entry Placeholder="Password" IsPassword="True" Text="{Binding password}"/>
-        <Button Text="Log In" Command="{Binding logInSubmit}" />
-        <Button Text="Register" Clicked="registerAccountName"/>
+        <Button Text="Log In" Command="{Binding logInSubmit}"
+                BorderColor="Black"
+                BackgroundColor="AliceBlue"
+                BorderWidth="1"
+                FontFamily="Arial"/>
+        <Button Text="Register" Clicked="registerAccountName"
+                BorderColor="Black"
+                BackgroundColor="AliceBlue"
+                BorderWidth="1"
+                FontFamily="Arial"/>
     </StackLayout>
 </ContentPage>

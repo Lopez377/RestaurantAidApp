@@ -21,19 +21,31 @@
             HorizontalOptions="Center"
             VerticalOptions="Center"
             Text="Restaurants"
-            Command="{Binding NavigateToRestaurantListPage}" />
+            Command="{Binding NavigateToRestaurantListPage}"
+            BorderColor="Black"
+                BackgroundColor="AliceBlue"
+                BorderWidth="1"
+                FontFamily="Arial"/>
 
         <Button
             HorizontalOptions="Center"
             VerticalOptions="Center"
             Text="Cart"
-            Command="{Binding NavigateToCustomerCartPageCommand}" />
+            Command="{Binding NavigateToCustomerCartPageCommand}" 
+            BorderColor="Black"
+                BackgroundColor="AliceBlue"
+                BorderWidth="1"
+                FontFamily="Arial"/>
 
         <Button
             HorizontalOptions="Center"
             VerticalOptions="Center"
             Text="Orders"
-            Command="{Binding NavigateToCustomerAccountPageCommand}" />
+            Command="{Binding NavigateToCustomerAccountPageCommand}"
+            BorderColor="Black"
+                BackgroundColor="AliceBlue"
+                BorderWidth="1"
+                FontFamily="Arial"/>
 
     </StackLayout>
 
