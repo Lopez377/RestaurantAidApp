@@ -8,7 +8,7 @@
 
     <ContentPage.Content>
         <StackLayout>
-            <ListView x:Name="cmenuList">
+            <ListView x:Name="cmenuList" SelectionMode="Single">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <TextCell Text="{Binding name}"/>
