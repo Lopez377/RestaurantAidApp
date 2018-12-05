@@ -12,17 +12,21 @@ namespace Restaurant_Aid.Views
         public CustomerCartPage()
         {
             InitializeComponent();
-            //menuList.ItemSelected += async (sender, e) =>
-            //{
-            //    if (e.SelectedItem != null)
-            //    {
-            //        var detailPage = new MenuDetailPage(e.SelectedItem as RMenuItem);
+            cmenuList.ItemSelected += async (sender, e) =>
+            {
+                if (e.SelectedItem != null)
+                {
+                    var answer = await DisplayAlert("Edit", "Remove from cart?", "Yes", "No");
+                    if (answer != false)
+                    {
+                        App.CMenuList.Remove(e.SelectedItem as RMenuItem);
+                        cmenuList.ItemsSource = null;
+                        cmenuList.ItemsSource = App.CMenuList;
+                    }
 
-            //        await Navigation.PushAsync(detailPage);
-
-            //        menuList.SelectedItem = null;
-            //    }
-            //};
+                }
+                ((ListView)sender).SelectedItem = null;
+            };
         }
         protected override void OnAppearing()
         {
@@ -35,7 +39,8 @@ namespace Restaurant_Aid.Views
 
         public async void goToCheckout(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new PaymentPage());
+            await Navigation.PushAsync(new PaymentPage());
         }
+
     }
 }
