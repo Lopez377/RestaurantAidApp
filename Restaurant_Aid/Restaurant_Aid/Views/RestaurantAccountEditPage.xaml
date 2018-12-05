@@ -3,14 +3,21 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
              prism:ViewModelLocator.AutowireViewModel="True"
-             x:Class="Restaurant_Aid.Views.RestaurantAccountEditPage">
+             x:Class="Restaurant_Aid.Views.RestaurantAccountEditPage"
+              BackgroundColor="#e0e0e0">
     <StackLayout>
-        <Label Text="Name"/>
-        <Entry x:Name="Name" />
-        <Label Text="Phone"/>
-        <Entry x:Name="Phone" />
-        <Label Text="Address"/>
-        <Entry x:Name="Address" />
-        <Button Text="Submit Changes" Clicked="submitChanges"/>
+        <Label Text="Name" TextColor="LightSlateGray" FontFamily="Roboto"/>
+        <Entry x:Name="Name" TextColor="Black" FontFamily="Roboto" />
+        <Label Text="Phone" TextColor="LightSlateGray" FontFamily="Roboto"/>
+        <Entry x:Name="Phone" TextColor="Black" FontFamily="Roboto" />
+        <Label Text="Address" TextColor="LightSlateGray" FontFamily="Roboto"/>
+        <Entry x:Name="Address" TextColor="Black" FontFamily="Roboto" />
+        <Button Text="Submit Changes" Clicked="submitChanges"
+                TextColor="WhiteSmoke"
+                BorderColor="GhostWhite"
+                BackgroundColor="#232F34"
+                BorderWidth="1"
+                BorderRadius="10"
+                FontFamily="Roboto"/>
     </StackLayout>
 </ContentPage>
