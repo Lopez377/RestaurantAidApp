@@ -3,6 +3,7 @@ using Restaurant_Aid.ViewModels;
 using System;
 using System.Collections.Generic;
 using Restaurant_Aid.Model;
+using Prism.Navigation;
 
 namespace Restaurant_Aid.Views
 {
@@ -30,6 +31,11 @@ namespace Restaurant_Aid.Views
             cmenuList.ItemsSource = null;
             //CHANGED
             cmenuList.ItemsSource = App.CMenuList;
+        }
+
+        public async void goToCheckout(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new PaymentPage());
         }
     }
 }

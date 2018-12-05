@@ -17,5 +17,7 @@
             </ListView>
         </StackLayout>
     </ContentPage.Content>
-
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Checkout" Clicked="goToCheckout" />
+    </ContentPage.ToolbarItems>
 </ContentPage>
