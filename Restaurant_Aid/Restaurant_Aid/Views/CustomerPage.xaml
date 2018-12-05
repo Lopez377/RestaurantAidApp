@@ -16,7 +16,7 @@
             VerticalOptions="CenterAndExpand"
             Text="{Binding Title}" />
 
-        <Image Source="RestIcon.jpg" />
+        <Image Source="RestIcon.png" />
 
         <Button
             HorizontalOptions="Center"
@@ -53,6 +53,18 @@
                 BorderWidth="1"
                 BorderRadius="10"
                 FontFamily="Roboto"/>
+
+        <!--<Button
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            Text="Acct. Info"
+            Command="{Binding NavigateToCustomerInfoPageCommand}"
+                TextColor="WhiteSmoke"
+                BorderColor="GhostWhite"
+                BackgroundColor="#232F34"
+                BorderWidth="1"
+                BorderRadius="10"
+                FontFamily="Roboto"/>-->
 
     </StackLayout>
 

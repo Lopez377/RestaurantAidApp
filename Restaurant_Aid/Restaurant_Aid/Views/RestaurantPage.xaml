@@ -16,7 +16,7 @@
             VerticalOptions="CenterAndExpand"
             Text="{Binding Title}" />
 
-        <Image Source="RestIcon.jpg" />
+        <Image Source="RestIcon.png" />
 
         <Button
             HorizontalOptions="Center"

@@ -294,7 +294,7 @@
       ]
     },
     "Newtonsoft.Json/12.0.1": {
-      "sha512": "jmVyoEyk0In8r+AObYQyFKVFm7uSRzE0XSHSbEtBJcZDMV6DqJoyB4FLcHwprPVhAh826so0db3DIKXVnpGoPA==",
+      "sha512": "pBR3wCgYWZGiaZDYP+HHYnalVnPJlpP1q55qvVb+adrDHmFMDc1NAKio61xTwftK3Pw5h7TZJPJEEVMd6ty8rg==",
       "type": "package",
       "path": "newtonsoft.json/12.0.1",
       "files": [
@@ -599,23 +599,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Toby\\.nuget\\packages\\": {},
+    "C:\\Users\\VessirAverisk\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Toby\\Projects\\RestaurantAidApp\\Restaurant_Aid\\Restaurant_Aid\\Restaurant_Aid.csproj",
+      "projectUniqueName": "C:\\Users\\VessirAverisk\\source\\githubrepos\\RestaurantAidApp\\Restaurant_Aid\\Restaurant_Aid\\Restaurant_Aid.csproj",
       "projectName": "Restaurant_Aid",
-      "projectPath": "C:\\Users\\Toby\\Projects\\RestaurantAidApp\\Restaurant_Aid\\Restaurant_Aid\\Restaurant_Aid.csproj",
-      "packagesPath": "C:\\Users\\Toby\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Toby\\Projects\\RestaurantAidApp\\Restaurant_Aid\\Restaurant_Aid\\obj\\",
+      "projectPath": "C:\\Users\\VessirAverisk\\source\\githubrepos\\RestaurantAidApp\\Restaurant_Aid\\Restaurant_Aid\\Restaurant_Aid.csproj",
+      "packagesPath": "C:\\Users\\VessirAverisk\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\VessirAverisk\\source\\githubrepos\\RestaurantAidApp\\Restaurant_Aid\\Restaurant_Aid\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Toby\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\VessirAverisk\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

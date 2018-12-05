@@ -109,10 +109,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\RestauranAid_Ban.jpg" />
+    <AndroidResource Include="Resources\drawable\RestIcon.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\RestIcon.jpg" />
+    <AndroidResource Include="Resources\drawable\Restaurant_Ban.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

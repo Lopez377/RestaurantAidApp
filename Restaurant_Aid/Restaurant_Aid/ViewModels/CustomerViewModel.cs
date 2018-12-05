@@ -20,6 +20,7 @@ namespace Restaurant_Aid.ViewModels
         public DelegateCommand NavigateToCustomerCartPageCommand { get; set; }
         public DelegateCommand NavigateToCustomerAccountPageCommand { get; set; }
         public DelegateCommand NavigateToRestaurantListPage { get; set; }
+        public DelegateCommand NavigateToCustomerInfoPageCommand { get; set; }
 
 
 
@@ -51,9 +52,18 @@ namespace Restaurant_Aid.ViewModels
             NavigateToCustomerCartPageCommand = new DelegateCommand(OnNavigateToCustomerCart);
             NavigateToCustomerAccountPageCommand = new DelegateCommand(OnNavigateToCustomerAccount);
             NavigateToRestaurantListPage = new DelegateCommand(OnNavigateToRestaurantList);
+            NavigateToCustomerInfoPageCommand = new DelegateCommand(OnNavigateToInfo);
 
             IsActiveChanged += OnIsActiveChanged;
         }
+
+        private void OnNavigateToInfo()
+        {
+            Debug.WriteLine($"**** {this.GetType().Name}.{nameof(OnNavigateToInfo)}");
+
+            _navigationService.NavigateAsync(nameof(CustomerInformationPage));
+        }
+
 
         private void OnNavigateToRestaurantList()
         {
