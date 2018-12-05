@@ -100,6 +100,38 @@ namespace Restaurant_Aid.Services
             return JsonConvert.DeserializeObject<IEnumerable<Order>>(temp).ToList();
         }
 
+        public async Task<List<Alert>> GetAlertsByRid(string rid)
+        {
+            Uri uri = new Uri(API_URL + "alert?rid=" + rid);
+            string temp;
+            try
+            {
+                temp = await SendGetRequest(uri);
+            }
+            catch (System.Net.WebException e)
+            {
+                throw e;
+            }
+            Debug.WriteLine("Parsing JSON");
+            return JsonConvert.DeserializeObject<IEnumerable<Alert>>(temp).ToList();
+        }
+
+        public async Task<Alert> GetSingleAlert(string id)
+        {
+            Uri uri = new Uri(API_URL + "alert?id=" + id);
+            string temp;
+            try
+            {
+                temp = await SendGetRequest(uri);
+            }
+            catch (System.Net.WebException e)
+            {
+                throw e;
+            }
+            Debug.WriteLine("Parsing JSON");
+            return JsonConvert.DeserializeObject<IEnumerable<Alert>>(temp).ToList().First();
+        }
+
         public async Task<List<Order>> GetSingleOrder(string oid)
         {
             Uri uri = new Uri(API_URL + "order?id=" + oid);
@@ -187,6 +219,12 @@ namespace Restaurant_Aid.Services
             return await SendPutRequest(uri, formData);
         }
 
+        public async Task<bool> editAlertStatus(string id, List<KeyValuePair<string, string>> formData)
+        {
+            Uri uri = new Uri(API_URL + "alert?id=" + id);
+            return await SendPutRequest(uri, formData);
+        }
+
         public async Task<bool> SendPutRequest(Uri uri, List<KeyValuePair<string, string>> formData)
         {
             Debug.WriteLine("Sending PUT request");
@@ -195,6 +233,25 @@ namespace Restaurant_Aid.Services
             if (response.IsSuccessStatusCode)
             {
                 Debug.WriteLine("Successful PUT");
+                return true;
+            }
+            return false;
+        }
+
+        public async Task<bool> deleteAlert(string id)
+        {
+            Uri uri = new Uri(API_URL + "alert?id=" + id);
+            return await SendDeleteRequest(uri);
+        }
+
+        public async Task<bool> SendDeleteRequest(Uri uri)
+        {
+            Debug.WriteLine("Sending DELETE request");
+            HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Delete, uri);
+            HttpResponseMessage response = await httpClient.SendAsync(request);
+            if (response.IsSuccessStatusCode)
+            {
+                Debug.WriteLine("Successful DELETE");
                 return true;
             }
             return false;
