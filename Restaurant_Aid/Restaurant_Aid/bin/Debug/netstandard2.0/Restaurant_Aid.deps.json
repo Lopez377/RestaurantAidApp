@@ -1,0 +1,194 @@
+{
+  "runtimeTarget": {
+    "name": ".NETStandard,Version=v2.0/",
+    "signature": "0975064486d144a190ad685e5ad0535b2de26697"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETStandard,Version=v2.0": {},
+    ".NETStandard,Version=v2.0/": {
+      "Restaurant_Aid/1.0.0": {
+        "dependencies": {
+          "ExternalMapsPlugin": "1.0.0",
+          "NETStandard.Library": "2.0.3",
+          "Newtonsoft.Json": "12.0.1",
+          "Prism.Unity.Forms": "7.1.0.431",
+          "Xamarin.Forms": "3.2.0.839982"
+        },
+        "runtime": {
+          "Restaurant_Aid.dll": {}
+        }
+      },
+      "ExternalMapsPlugin/1.0.0": {
+        "runtime": {
+          "lib/netstandard1.0/Plugin.MapsPlugin.Abstractions.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          },
+          "lib/netstandard1.0/Plugin.MapsPlugin.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Microsoft.NETCore.Platforms/1.1.0": {},
+      "NETStandard.Library/2.0.3": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0"
+        }
+      },
+      "Newtonsoft.Json/12.0.1": {
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "12.0.0.0",
+            "fileVersion": "12.0.1.22727"
+          }
+        }
+      },
+      "Prism.Core/7.1.0.431": {
+        "runtime": {
+          "lib/netstandard2.0/Prism.dll": {
+            "assemblyVersion": "7.1.0.431",
+            "fileVersion": "7.1.0.431"
+          }
+        }
+      },
+      "Prism.Forms/7.1.0.431": {
+        "dependencies": {
+          "Prism.Core": "7.1.0.431",
+          "Xamarin.Forms": "3.2.0.839982"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Prism.Forms.dll": {
+            "assemblyVersion": "7.1.0.431",
+            "fileVersion": "7.1.0.431"
+          }
+        }
+      },
+      "Prism.Unity.Forms/7.1.0.431": {
+        "dependencies": {
+          "Prism.Forms": "7.1.0.431",
+          "Unity.Container": "5.8.11"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Prism.Unity.Forms.dll": {
+            "assemblyVersion": "7.1.0.431",
+            "fileVersion": "7.1.0.431"
+          }
+        }
+      },
+      "Unity.Abstractions/3.3.1": {
+        "runtime": {
+          "lib/netstandard2.0/Unity.Abstractions.dll": {
+            "assemblyVersion": "3.3.1.0",
+            "fileVersion": "3.3.1.0"
+          }
+        }
+      },
+      "Unity.Container/5.8.11": {
+        "dependencies": {
+          "Unity.Abstractions": "3.3.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Unity.Container.dll": {
+            "assemblyVersion": "5.8.11.0",
+            "fileVersion": "5.8.11.0"
+          }
+        }
+      },
+      "Xamarin.Forms/3.2.0.839982": {
+        "runtime": {
+          "lib/netstandard2.0/Xamarin.Forms.Core.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          },
+          "lib/netstandard2.0/Xamarin.Forms.Platform.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          },
+          "lib/netstandard2.0/Xamarin.Forms.Xaml.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Restaurant_Aid/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ExternalMapsPlugin/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-fJVRdSeSN16T1FBDbVJJg7H1IyDiD4IrfkYmbo4UohwonLfKpOU7LIp4azRFg7HpSIdmi5e6e2cHLxFTxFJBcA==",
+      "path": "externalmapsplugin/1.0.0",
+      "hashPath": "externalmapsplugin.1.0.0.nupkg.sha512"
+    },
+    "Microsoft.NETCore.Platforms/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-bLpT1f/SFlO1CzqXG12KnJzpZs6lv24uX2Rzi4Fmm0noJpNlnWRVryuO3yK18Ca04t/YHcO1e1Z0WDfjseqNzw==",
+      "path": "microsoft.netcore.platforms/1.1.0",
+      "hashPath": "microsoft.netcore.platforms.1.1.0.nupkg.sha512"
+    },
+    "NETStandard.Library/2.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
+      "path": "netstandard.library/2.0.3",
+      "hashPath": "netstandard.library.2.0.3.nupkg.sha512"
+    },
+    "Newtonsoft.Json/12.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-pBR3wCgYWZGiaZDYP+HHYnalVnPJlpP1q55qvVb+adrDHmFMDc1NAKio61xTwftK3Pw5h7TZJPJEEVMd6ty8rg==",
+      "path": "newtonsoft.json/12.0.1",
+      "hashPath": "newtonsoft.json.12.0.1.nupkg.sha512"
+    },
+    "Prism.Core/7.1.0.431": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-l4sBztXr1d2aJ1Ub5OKcd8dkf18UV7k+DWRbi0uen8y0pqb0tH+OC1/B35ZvaxMNlCtl1VZYbeq6wypdcrt92A==",
+      "path": "prism.core/7.1.0.431",
+      "hashPath": "prism.core.7.1.0.431.nupkg.sha512"
+    },
+    "Prism.Forms/7.1.0.431": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-L9CQS9PKFXSjpYEdDQeucmzF7kOH5af+dgVBgv5+zId6Rjyzk4OMyzG0BH05zQiWCsbx3qnXJG7Mc8Q4qeMlEQ==",
+      "path": "prism.forms/7.1.0.431",
+      "hashPath": "prism.forms.7.1.0.431.nupkg.sha512"
+    },
+    "Prism.Unity.Forms/7.1.0.431": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Livpa/Tu3HgIT1pcCyFdjpEU864rqnW5tVVQIXBhLi5NOcGcoEjYdxvbmVtm3CWxYGQJpu8QOHtA0hM+pj0BXA==",
+      "path": "prism.unity.forms/7.1.0.431",
+      "hashPath": "prism.unity.forms.7.1.0.431.nupkg.sha512"
+    },
+    "Unity.Abstractions/3.3.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-2dFFUnyzSHDgyqVeZBo4X1M3mxh+XCdK66aiuALuPWwXsqmGuGfqD0/sbDNnA5FGYnqby4Fb+4X/JqoN+NjhuA==",
+      "path": "unity.abstractions/3.3.1",
+      "hashPath": "unity.abstractions.3.3.1.nupkg.sha512"
+    },
+    "Unity.Container/5.8.11": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-8XEfzRwoX/9NtHU4WapD3DdCxBQumIoDIIEBbqElhr2Y5HwokaAkiomuIKvVW9znNDtv1az3i1xKM6usiiWjqg==",
+      "path": "unity.container/5.8.11",
+      "hashPath": "unity.container.5.8.11.nupkg.sha512"
+    },
+    "Xamarin.Forms/3.2.0.839982": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-r2qGQiZrNVjvyNlfi39C7rmPnMrmz+O1A2FkJ3SR0Ac5ZXTfAOB6KpAtITOV7bRmJlEUAltFXPh6snO0VFdz+g==",
+      "path": "xamarin.forms/3.2.0.839982",
+      "hashPath": "xamarin.forms.3.2.0.839982.nupkg.sha512"
+    }
+  }
+}
