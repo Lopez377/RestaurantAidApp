@@ -20,19 +20,19 @@
         <Button
             HorizontalOptions="Center"
             VerticalOptions="Center"
-            Text="RestaurantAccount"
+            Text="Account"
             Command="{Binding NavigateToRestaurantAccountPageCommand}" />
 
         <Button
             HorizontalOptions="Center"
             VerticalOptions="Center"
-            Text="RestaurantPing"
+            Text="Alerts"
             Command="{Binding NavigateToRestaurantPingPageCommand}" />
 
         <Button
             HorizontalOptions="Center"
             VerticalOptions="Center"
-            Text="RestaurantMenu"
+            Text="Menu"
             Command="{Binding NavigateToRestaurantMenuPageCommand}" />
 
     </StackLayout>
