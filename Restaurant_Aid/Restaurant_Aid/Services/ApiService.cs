@@ -52,6 +52,22 @@ namespace Restaurant_Aid.Services
             return JsonConvert.DeserializeObject<IEnumerable<Restaurant>>(temp).ToList().First();
         }
 
+        public async Task<Restaurant> GetSingleRestaurantByUsername(string username)
+        {
+            Uri uri = new Uri(API_URL + "restaurant?username=" + username);
+            string temp;
+            try
+            {
+                temp = await SendGetRequest(uri);
+            }
+            catch (System.Net.WebException e)
+            {
+                throw e;
+            }
+            Debug.WriteLine("Parsing JSON");
+            return JsonConvert.DeserializeObject<IEnumerable<Restaurant>>(temp).ToList().First();
+        }
+
         public async Task<List<RMenuItem>> GetMenu(int rid)
         {
             Uri uri = new Uri(API_URL + "menu?rid=" + rid.ToString());
@@ -137,6 +153,12 @@ namespace Restaurant_Aid.Services
         public async Task<bool> createOrder(List<KeyValuePair<string, string>> formData)
         {
             Uri uri = new Uri(API_URL + "order");
+            return await SendPostRequest(uri, formData);
+        }
+
+        public async Task<bool> createRestaurant(List<KeyValuePair<string, string>> formData)
+        {
+            Uri uri = new Uri(API_URL + "restaurant");
             return await SendPostRequest(uri, formData);
         }
 

@@ -39,7 +39,7 @@ namespace Restaurant_Aid.ViewModels
         {
             Debug.WriteLine($"**** {this.GetType().Name}.{nameof(OnNavigateToRestaurant)}");
 
-            _navigationService.NavigateAsync(nameof(RestaurantPage));
+            _navigationService.NavigateAsync(nameof(RestaurantLogIn));
         }
 
         private void OnNavigateToCustomer()
