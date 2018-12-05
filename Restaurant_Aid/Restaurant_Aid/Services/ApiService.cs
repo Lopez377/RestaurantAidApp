@@ -180,5 +180,24 @@ namespace Restaurant_Aid.Services
             }
             return false;
         }
+
+        public async Task<bool> editRestaurant(string rid, List<KeyValuePair<string, string>> formData)
+        {
+            Uri uri = new Uri(API_URL + "restaurant?id=" + rid);
+            return await SendPutRequest(uri, formData);
+        }
+
+        public async Task<bool> SendPutRequest(Uri uri, List<KeyValuePair<string, string>> formData)
+        {
+            Debug.WriteLine("Sending PUT request");
+            HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Put, uri) { Content = new FormUrlEncodedContent(formData) };
+            HttpResponseMessage response = await httpClient.SendAsync(request);
+            if (response.IsSuccessStatusCode)
+            {
+                Debug.WriteLine("Successful PUT");
+                return true;
+            }
+            return false;
+        }
     }
 }

@@ -10,29 +10,15 @@
     Title="R_Account"
     BackgroundColor="#e0e0e0">
 
-    <StackLayout HorizontalOptions="Center"
-                 VerticalOptions="Center"
-                 Spacing="10">
-
-        <Label
-            Text="Restaurant: The Za Place" />
-
-        <Label
-            Text="ID: Za91224" />
-
-        <Label>
-            <Label.Text>
-                Address: 15935 Pepperoni Way
-                Cheeseville, CA 35715
-            </Label.Text>
-        </Label>
-
-
-
-
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+        <Label x:Name="rid"/>
+        <Label x:Name="name"/>
+        <Label x:Name="username"/>
+        <Label x:Name="address"/>
+        <Label x:Name="phone"/>
     </StackLayout>
 
-
-
-
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Edit" Clicked="editRestaurant" />
+    </ContentPage.ToolbarItems>
 </ContentPage>

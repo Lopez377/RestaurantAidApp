@@ -31,12 +31,12 @@ namespace Restaurant_Aid.Views
             if(await apiService.createOrder(formData))
             {
                 App.CMenuList.Clear();
-                Application.Current.MainPage.DisplayAlert("Success!", "Your order has been submitted!", "Ok!");
-                Navigation.PopAsync();
+                await Application.Current.MainPage.DisplayAlert("Success!", "Your order has been submitted!", "Ok!");
+                await Navigation.PopAsync();
             }
             else
             {
-                Application.Current.MainPage.DisplayAlert("Oops!", "Something went wrong with your order!", "Ok.");
+                await Application.Current.MainPage.DisplayAlert("Oops!", "Something went wrong with your order!", "Ok.");
             }
         }
     }

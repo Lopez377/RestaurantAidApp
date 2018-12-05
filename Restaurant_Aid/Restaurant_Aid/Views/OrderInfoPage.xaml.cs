@@ -46,11 +46,11 @@ namespace Restaurant_Aid.Views
             formData.Add(new KeyValuePair<string, string>("detail", order[0].detail));
             if(await apiService.sendAlert(formData))
             {
-                Application.Current.MainPage.DisplayAlert("Success!", "Your alert has been sent!", "Ok!");
+                await Application.Current.MainPage.DisplayAlert("Success!", "Your alert has been sent!", "Ok!");
             }
             else
             {
-                Application.Current.MainPage.DisplayAlert("Error!", "Please find your nearest server.", "Ok");
+                await Application.Current.MainPage.DisplayAlert("Error!", "Please find your nearest server.", "Ok");
             }
         }
     }

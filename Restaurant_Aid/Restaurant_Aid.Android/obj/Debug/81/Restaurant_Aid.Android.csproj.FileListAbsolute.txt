@@ -28,7 +28,6 @@ D:\School\CSUSM\Fall 2018\RestaurantAidApp\Restaurant_Aid\Restaurant_Aid.Android
 D:\School\CSUSM\Fall 2018\RestaurantAidApp\Restaurant_Aid\Restaurant_Aid.Android\obj\Debug\81\R.cs.flag
 D:\School\CSUSM\Fall 2018\RestaurantAidApp\Restaurant_Aid\Restaurant_Aid.Android\obj\Debug\81\R.txt
 D:\School\CSUSM\Fall 2018\RestaurantAidApp\Restaurant_Aid\Restaurant_Aid.Android\obj\Debug\81\uploadflags.txt
-D:\School\CSUSM\Fall 2018\RestaurantAidApp\Restaurant_Aid\Restaurant_Aid.Android\bin\Debug\Restaurant_Aid.Android.dll
 D:\School\CSUSM\Fall 2018\RestaurantAidApp\Restaurant_Aid\Restaurant_Aid.Android\bin\Debug\Mono.Android.pdb
 D:\School\CSUSM\Fall 2018\RestaurantAidApp\Restaurant_Aid\Restaurant_Aid.Android\bin\Debug\mscorlib.pdb
 D:\School\CSUSM\Fall 2018\RestaurantAidApp\Restaurant_Aid\Restaurant_Aid.Android\bin\Debug\Newtonsoft.Json.pdb
