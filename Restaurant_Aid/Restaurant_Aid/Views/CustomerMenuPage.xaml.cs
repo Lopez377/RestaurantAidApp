@@ -18,10 +18,11 @@ namespace Restaurant_Aid.Views
         private string address;
         private ApiService apiService;
         public ObservableCollection<RMenuItem> menuListSource;
-        public CustomerMenuPage(int _rid, string address)
+        public CustomerMenuPage(int _rid, string _address)
         {
             InitializeComponent();
             rid = _rid;
+            address = _address;
             menuList.ItemSelected += async (sender, e) =>
             {
                 if (e.SelectedItem != null)
