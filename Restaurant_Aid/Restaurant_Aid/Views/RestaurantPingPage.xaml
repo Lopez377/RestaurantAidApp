@@ -4,36 +4,19 @@
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="Restaurant_Aid.Views.RestaurantPingPage"
-             Title="Ping Page"
+             Title="Alerts"
              BackgroundColor="#e0e0e0">
 
     <StackLayout
-        HorizontalOptions="CenterAndExpand"
-        VerticalOptions="StartAndExpand" >
+        HorizontalOptions="CenterAndExpand" VerticalOptions="FillAndExpand">
 
-        <Label
-            Text="PING1: [Customer ID], [Time Pinged]" />
-
-        <Label
-            Text="PING2: [Customer ID], [Time Pinged]" />
-
-        <Label
-            Text="PING3: [Customer ID], [Time Pinged]" />
-
-        <Label
-            Text="PING4: [Customer ID], [Time Pinged]" />
-
-        <Label
-            Text="PING5: [Customer ID], [Time Pinged]" />
-
-        <Label
-            Text="PING6: [Customer ID], [Time Pinged]" />
-
-        <Label
-            Text="PING7: [Customer ID], [Time Pinged]" />
-
-        <Label
-            Text="PING8: [Customer ID], [Time Pinged]" />
+        <ListView x:Name="alertListView" ItemTapped="goToAlertPage" VerticalOptions="FillAndExpand">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding status}" Detail="{Binding detail}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
 
     </StackLayout>
 

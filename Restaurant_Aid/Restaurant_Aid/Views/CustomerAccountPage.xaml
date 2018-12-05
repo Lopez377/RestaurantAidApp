@@ -11,7 +11,7 @@
     <ListView x:Name="orderListView" ItemTapped="goToOrderInfo">
         <ListView.ItemTemplate>
             <DataTemplate>
-                <TextCell Text="{Binding .}" Detail="Order #"/>
+                <TextCell Text="{Binding .}" Detail="Order #" TextColor="Black"/>
             </DataTemplate>
         </ListView.ItemTemplate>
     </ListView>

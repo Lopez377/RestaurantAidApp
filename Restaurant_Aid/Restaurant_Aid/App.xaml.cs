@@ -70,7 +70,7 @@ namespace Restaurant_Aid
             containerRegistry.RegisterForNavigation<RestaurantLogIn, RestaurantLogInViewModel>();
             containerRegistry.RegisterForNavigation<RestaurantCreationPage, RestaurantCreationPageViewModel>();
             containerRegistry.RegisterForNavigation<RestaurantAccountEditPage, RestaurantAccountEditPageViewModel>();
-            containerRegistry.RegisterForNavigation<CustomerInformationPage, CustomerInformationPageViewModel>();
+            containerRegistry.RegisterForNavigation<AlertDetailPage, AlertDetailPageViewModel>();
         }
     }
 }
