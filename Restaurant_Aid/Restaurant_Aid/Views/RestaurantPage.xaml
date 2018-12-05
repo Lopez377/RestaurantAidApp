@@ -3,7 +3,8 @@
 	xmlns="http://xamarin.com/schemas/2014/forms"
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 	x:Class="Restaurant_Aid.Views.RestaurantPage"
-    Title="Restaurant">
+    Title="Restaurant"
+    BackgroundColor="#e0e0e0">
 
     <StackLayout
 		HorizontalOptions="CenterAndExpand"
@@ -22,30 +23,36 @@
             VerticalOptions="Center"
             Text="RestaurantAccount"
             Command="{Binding NavigateToRestaurantAccountPageCommand}"
-            BorderColor="Black"
-                BackgroundColor="AliceBlue"
+                TextColor="WhiteSmoke"
+                BorderColor="GhostWhite"
+                BackgroundColor="#232F34"
                 BorderWidth="1"
-                FontFamily="Arial"/>
+                BorderRadius="10"
+                FontFamily="Roboto"/>
 
         <Button
             HorizontalOptions="Center"
             VerticalOptions="Center"
             Text="RestaurantPing"
             Command="{Binding NavigateToRestaurantPingPageCommand}" 
-            BorderColor="Black"
-                BackgroundColor="AliceBlue"
+                TextColor="WhiteSmoke"
+                BorderColor="GhostWhite"
+                BackgroundColor="#232F34"
                 BorderWidth="1"
-                FontFamily="Arial"/>
+                BorderRadius="10"
+                FontFamily="Roboto"/>
 
         <Button
             HorizontalOptions="Center"
             VerticalOptions="Center"
             Text="RestaurantMenu"
             Command="{Binding NavigateToRestaurantMenuPageCommand}"
-            BorderColor="Black"
-                BackgroundColor="AliceBlue"
+                TextColor="WhiteSmoke"
+                BorderColor="GhostWhite"
+                BackgroundColor="#232F34"
                 BorderWidth="1"
-                FontFamily="Arial"/>
+                BorderRadius="10"
+                FontFamily="Roboto"/>
 
     </StackLayout>
 

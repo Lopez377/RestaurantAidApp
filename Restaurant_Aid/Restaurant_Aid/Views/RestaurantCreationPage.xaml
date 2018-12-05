@@ -3,13 +3,26 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
              prism:ViewModelLocator.AutowireViewModel="True"
-             x:Class="Restaurant_Aid.Views.RestaurantCreationPage">
+             x:Class="Restaurant_Aid.Views.RestaurantCreationPage"
+             BackgroundColor="#e0e0e0">
     <StackLayout>
-        <Entry x:Name="name" Placeholder="Restaurant Name"/>
-        <Entry x:Name="username" Placeholder="Username"/>
-        <Entry x:Name="password" Placeholder="Password" IsPassword="True"/>
-        <Entry x:Name="address" Placeholder="Address"/>
-        <Entry x:Name="phone" Placeholder="Phone Number"/>
-        <Button Text="Submit" Clicked="submitRestaurant" />
+        <Entry x:Name="name" Placeholder="Restaurant Name"
+               FontFamily="Roboto"
+               TextColor="Black"/>
+        <Entry x:Name="username" Placeholder="Username"
+               FontFamily="Roboto"
+               TextColor="Black"/>
+        <Entry x:Name="password" Placeholder="Password" IsPassword="True"
+               FontFamily="Roboto"
+               TextColor="Black"/>
+        <Entry x:Name="address" Placeholder="Address"
+               FontFamily="Roboto"
+               TextColor="Black"/>
+        <Entry x:Name="phone" Placeholder="Phone Number"
+               FontFamily="Roboto"
+               TextColor="Black"/>
+        <Button Text="Submit" Clicked="submitRestaurant"
+               FontFamily="Roboto"
+               TextColor="Black"/>
     </StackLayout>
 </ContentPage>

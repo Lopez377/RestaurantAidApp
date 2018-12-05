@@ -3,12 +3,29 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
              prism:ViewModelLocator.AutowireViewModel="True"
-             x:Class="Restaurant_Aid.Views.AccountCreationPage">
+             x:Class="Restaurant_Aid.Views.AccountCreationPage"
+             BackgroundColor="#e0e0e0">
     <StackLayout>
-        <Entry x:Name ="usernameEntry" Placeholder="Username" />
-        <Entry x:Name ="passwordEntry" Placeholder="Password" IsPassword="True"/>
-        <Entry x:Name ="emailEntry" Placeholder="Email" />
-        <Entry x:Name ="dobEntry" Placeholder="D.O.B. ex 1/2/95" />
-        <Button Text="Submit" Clicked="submitProfile" />
+        <Entry x:Name ="usernameEntry" Placeholder="Username"
+               FontFamily="Roboto"
+               TextColor="Black"/>
+        <Entry x:Name ="passwordEntry" Placeholder="Password" IsPassword="True"
+               FontFamily="Roboto"
+               TextColor="Black"/>
+           <Entry x:Name ="emailEntry" Placeholder="Email"
+                  FontFamily="Roboto"
+               TextColor="Black"/>
+        <Entry x:Name ="dobEntry" Placeholder="D.O.B. ex 1/2/95"
+               FontFamily="Roboto"
+               TextColor="Black"/>
+        <Button Text="Submit" Clicked="submitProfile" 
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                TextColor="WhiteSmoke"
+                BorderColor="GhostWhite"
+                BackgroundColor="#232F34"
+                BorderWidth="1"
+                BorderRadius="10"
+                FontFamily="Roboto"/>
     </StackLayout>
 </ContentPage>

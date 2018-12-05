@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Restaurant_Aid.Views.CustomerItemDetail"
-             Title="C_Details">
+             Title="C_Details"
+             BackgroundColor="#e0e0e0">
     <ContentPage.Content>
         <ScrollView>
             <FlexLayout
@@ -10,21 +11,19 @@
             AlignContent="Start"
             Wrap="Wrap">
 
-                <!-- <Image Source="buns.png" FlexLayout.Basis="100%" /> -->
-
-                <Label Text="{Binding name}" HorizontalTextAlignment="Center" TextColor="#01487E"
+                <Label Text="{Binding name}" HorizontalTextAlignment="Center" TextColor="Black"
                    FontAttributes="Bold" FontSize="Large" Margin="10, 10" />
 
                 <BoxView FlexLayout.Basis="100%" HeightRequest="0" />
 
-                <Label Text="Description" FontAttributes="Bold" FontSize="Medium" TextColor="#EE3F60"
+                <Label Text="Description" FontAttributes="Bold" FontSize="Medium" TextColor="LightSlateGray"
                    Margin="10,10" HorizontalOptions="FillAndExpand" />
                 <BoxView FlexLayout.Basis="100%" HeightRequest="0" />
                 <Label Text="{Binding description}" Margin="10,10" FontSize="Small" />
 
                 <BoxView FlexLayout.Basis="100%" HeightRequest="0" />
 
-                <Label Text="Price" FontAttributes="Bold" FontSize="Medium" TextColor="#EE3F60" 
+                <Label Text="Price" FontAttributes="Bold" FontSize="Medium" TextColor="LightSlateGray" 
                    Margin="10,10" HorizontalOptions="FillAndExpand" />
                 <BoxView FlexLayout.Basis="100%" HeightRequest="0" />
                 <Label Text="{Binding price}" Margin="10,10" FontSize="Small" />

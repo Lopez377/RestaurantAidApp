@@ -5,7 +5,8 @@
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="Restaurant_Aid.Views.CustomerAccountPage"
              x:Name="Customer_Account"
-             Title="Orders">
+             Title="Orders"
+             BackgroundColor="#e0e0e0">
 
     <ListView x:Name="orderListView" ItemTapped="goToOrderInfo">
         <ListView.ItemTemplate>

@@ -4,13 +4,14 @@
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="Restaurant_Aid.Views.RestaurantListPage"
-             Title="Restaurant List">
+             Title="Restaurant List"
+             BackgroundColor="#e0e0e0">
     <StackLayout>
         <ActivityIndicator Color="Red" IsRunning="{Binding waiting}" IsVisible="{Binding waiting}"/>
         <ListView ItemsSource="{Binding restaurants}" ItemTapped="goToRestaurantMenu">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <TextCell Text="{Binding name}" Detail="{Binding address}"/>
+                    <TextCell Text="{Binding name}" Detail="{Binding address}" />
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>

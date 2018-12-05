@@ -4,7 +4,7 @@
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 	x:Class="Restaurant_Aid.Views.MainPage"
 	Title="{Binding Title}"
-    BackgroundColor="WhiteSmoke">
+    BackgroundColor="#e0e0e0">
 
     <StackLayout 
 		HorizontalOptions="CenterAndExpand"
@@ -36,13 +36,14 @@
                 HorizontalOptions="Center"
                 VerticalOptions="Center"
                 Text="Restaurant Login"
-                TextColor="Black"
                 Command="{Binding NavigateToRestaurantCommand}" 
-                BackgroundColor="#ffb74d"
+                TextColor="WhiteSmoke"
+                BorderColor="GhostWhite"
+                BackgroundColor="#232F34"
                 BorderWidth="1"
                 BorderRadius="10"
                 FontFamily="Roboto"/>
-        
+
         </StackLayout>
     </StackLayout>
 

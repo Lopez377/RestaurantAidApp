@@ -4,7 +4,8 @@
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="Restaurant_Aid.Views.RestaurantPingPage"
-             Title="Ping Page">
+             Title="Ping Page"
+             BackgroundColor="#e0e0e0">
 
     <StackLayout
         HorizontalOptions="CenterAndExpand"
