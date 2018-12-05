@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             Title="Details"
+             x:Class="Restaurant_Aid.Views.RestaurantOrderInfoPage">
+    <StackLayout>
+        <Button Text="Set to IN PROGRESS" Clicked="updateStatus" CommandParameter="IN PROGRESS"/>
+        <Button Text="Set to SERVED" Clicked="updateStatus" CommandParameter="SERVED"/>
+        <Label x:Name="idLabel" />
+        <Label x:Name="statusLabel" />
+        <Label x:Name="detailLabel" />
+        <ListView x:Name="menuItemListView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding name}" Detail="{Binding price}" TextColor="Black"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Delete" Clicked="deleteOrder" />
+    </ContentPage.ToolbarItems>
+</ContentPage>

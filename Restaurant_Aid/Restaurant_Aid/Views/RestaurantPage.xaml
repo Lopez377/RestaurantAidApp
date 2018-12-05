@@ -9,12 +9,7 @@
     <StackLayout
 		HorizontalOptions="CenterAndExpand"
 		VerticalOptions="CenterAndExpand"
-        Spacing="10">
-
-        <Label
-            HorizontalOptions="CenterAndExpand"
-            VerticalOptions="CenterAndExpand"
-            Text="{Binding Title}" />
+        Spacing="8">
 
         <Image Source="RestIcon.jpg" />
 
@@ -47,6 +42,18 @@
             VerticalOptions="Center"
             Text="Menu"
             Command="{Binding NavigateToRestaurantMenuPageCommand}"
+                TextColor="WhiteSmoke"
+                BorderColor="GhostWhite"
+                BackgroundColor="#232F34"
+                BorderWidth="1"
+                BorderRadius="10"
+                FontFamily="Roboto"/>
+
+        <Button
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            Text="Orders"
+            Command="{Binding NavigateToRestaurantOrderPageCommand}"
                 TextColor="WhiteSmoke"
                 BorderColor="GhostWhite"
                 BackgroundColor="#232F34"

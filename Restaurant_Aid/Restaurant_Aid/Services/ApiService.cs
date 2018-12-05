@@ -100,6 +100,23 @@ namespace Restaurant_Aid.Services
             return JsonConvert.DeserializeObject<IEnumerable<Order>>(temp).ToList();
         }
 
+
+        public async Task<List<Order>> GetOrdersForRestaurant(int rid)
+        {
+            Uri uri = new Uri(API_URL + "order?rid=" + rid.ToString());
+            string temp;
+            try
+            {
+                temp = await SendGetRequest(uri);
+            }
+            catch (System.Net.WebException e)
+            {
+                throw e;
+            }
+            Debug.WriteLine("Parsing JSON");
+            return JsonConvert.DeserializeObject<IEnumerable<Order>>(temp).ToList();
+        }
+
         public async Task<List<Alert>> GetAlertsByRid(string rid)
         {
             Uri uri = new Uri(API_URL + "alert?rid=" + rid);
@@ -225,6 +242,12 @@ namespace Restaurant_Aid.Services
             return await SendPutRequest(uri, formData);
         }
 
+        public async Task<bool> editOrderStatus(string id, List<KeyValuePair<string, string>> formData)
+        {
+            Uri uri = new Uri(API_URL + "order?id=" + id);
+            return await SendPutRequest(uri, formData);
+        }
+
         public async Task<bool> SendPutRequest(Uri uri, List<KeyValuePair<string, string>> formData)
         {
             Debug.WriteLine("Sending PUT request");
@@ -241,6 +264,12 @@ namespace Restaurant_Aid.Services
         public async Task<bool> deleteAlert(string id)
         {
             Uri uri = new Uri(API_URL + "alert?id=" + id);
+            return await SendDeleteRequest(uri);
+        }
+
+        public async Task<bool> deleteOrder(string id)
+        {
+            Uri uri = new Uri(API_URL + "order?id=" + id);
             return await SendDeleteRequest(uri);
         }
 

@@ -22,6 +22,7 @@ namespace Restaurant_Aid.ViewModels
         public DelegateCommand NavigateToRestaurantAccountPageCommand { get; set; }
         public DelegateCommand NavigateToRestaurantPingPageCommand { get; set; }
         public DelegateCommand NavigateToRestaurantMenuPageCommand { get; set; }
+        public DelegateCommand NavigateToRestaurantOrderPageCommand { get; set; }
 
         public event EventHandler IsActiveChanged;
 
@@ -53,6 +54,7 @@ namespace Restaurant_Aid.ViewModels
             NavigateToRestaurantAccountPageCommand = new DelegateCommand(OnNavigateToRestaurantAccount);
             NavigateToRestaurantPingPageCommand = new DelegateCommand(OnNavigateToRestaurantPing);
             NavigateToRestaurantMenuPageCommand = new DelegateCommand(OnNavigateToRestaurantMenu);
+            NavigateToRestaurantOrderPageCommand = new DelegateCommand(OnNavigateToRestaurantOrder);
 
             //RMenuList = new List<RMenuItem>();
             //RMenuList.Add(new RMenuItem { Id = Guid.NewGuid(), Name = "Pizza", Description = "Yummy Pizza", Price = "10.99" });
@@ -80,6 +82,13 @@ namespace Restaurant_Aid.ViewModels
             Debug.WriteLine($"**** {this.GetType().Name}.{nameof(OnNavigateToRestaurantAccount)}");
 
             _navigationService.NavigateAsync(nameof(RestaurantAccountPage));
+        }
+
+        private void OnNavigateToRestaurantOrder()
+        {
+            Debug.WriteLine($"**** {this.GetType().Name}.{nameof(OnNavigateToRestaurantOrder)}");
+
+            _navigationService.NavigateAsync(nameof(RestaurantOrderPage));
         }
 
         private void OnIsActiveChanged(object sender, EventArgs e)
